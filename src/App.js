@@ -11,6 +11,7 @@ import CategoriesBar from './CategoriesBar'
 import Description from './ProductPage/Description';
 import WatchList from './WatchList'
 import WatchListMap from './WatchListMap'
+import Pagination from './Pagination'
 function App() {
   return (
     <div className="App">

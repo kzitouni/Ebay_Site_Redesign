@@ -20,22 +20,22 @@ console.log(endingTime1)
 console.log(item.buyitnow, "ayyy")
     return (
         <div style = {{marginBottom:'25px'}}>
-            <div style = {{display:"flex", marginBottom:'2rem'}}>
+            <div className="Image_Cont" >
                 <div className="SearchImages" style={{backgroundImage:`url(${item.item})`}}>
                     {/* <img src={item.item}/> */}
                 </div>
-                <div style={{ marginLeft:'1vw', textAlign:'left'}}>
-                  <Link to={`/product${item.itemId}`}>  <p onClick={() => itemFetch(item.itemId)} style={{marginTop:'.8rem', marginBottom:'0rem', textAlign:'left', fontSize:'.9rem'}}>{item.title}</p> </Link>
-    <p style={{marginTop:'0rem', marginBottom:'0rem', fontSize:'.68rem'}}>{item.subtitle}New</p>
+                <div className="Sub_Info_Cont" >
+                  <Link to={`/product${item.itemId}`}>  <p onClick={() => itemFetch(item.itemId)} className="Sub_Info_Title" >{item.title}</p> </Link>
+    <p className="Sub_Info_Subtitle">{item.conditionDisplayName}</p>
                     <div className="Left_Search" >
-                    <div style={{width:'11vw'}}>
+                    <div className="Sub_Info_Price_Cont" >
                     {/* <p style={{textAlign:'left', marginTop:'0rem', marginBottom:'0rem', fontSize:'.8rem'}}>Item Price: </p> */}
-    {item.buyitnow != null ? (<div><p style={{textAlign:'left', fontWeight:'bold', marginBottom:'0rem', fontSize:'.8rem'}}>${item.buyitnow.toString().indexOf(".") != -1 ? ((item.buyitnow).split(".")[1].length < 2 ? (item.buyitnow.concat("0")) : item.buyitnow) : item.buyitnow.concat(".00")} </p>
-                        <p style={{textAlign:'left', marginTop:'.4vh', marginBottom:'.4vh', fontSize:'.5rem', color:'grey'}}>Buy It Now</p>
+    {item.buyitnow != null ? (<div><p className="Sub_Info_Price" >${item.buyitnow.toString().indexOf(".") != -1 ? ((item.buyitnow).split(".")[1].length < 2 ? (item.buyitnow.concat("0")) : item.buyitnow) : item.buyitnow.concat(".00")} </p>
+                        <p className="Sub_Info_BuyText">Buy It Now</p>
                        </div> ) : null}
-    <p style={{textAlign:'left', fontWeight:'bold', marginBottom:'0rem', fontSize:'.8rem'}}>${(item.price).split(".")[1].length < 2 ? (item.price.concat("0")) : item.price }</p>
-                    <p style={{textAlign:'left', fontWeight:'bold', marginTop:'.5vh', marginBottom:'0rem', fontSize:'.5rem', color:'grey'}}>+ {(item.shipping == "Free" )? "Free" : item.shippingcost} Shipping</p>
-    <p style={{textAlign:'left', marginTop:'2vh', marginBottom:'0rem', fontSize:'.7rem', fontWeight:'bold'}}>{item.listingtype == "AuctionWithBIN" ? "Buy It Now + Auction" : item.listingtype == "FixedPrice" || "StoreInventory" ? "Buy It Now" : console.log(item.listingtype)}</p>
+    <p className="Sub_Info_Price">${(item.price).split(".")[1].length < 2 ? (item.price.concat("0")) : item.price }</p>
+                    <p className="Sub_Info_ShippText">+ {(item.shipping == "Free" )? "Free" : item.shippingcost} Shipping</p>
+                    {item.listingtype == "Auction" ? <p className="Sub_Info_Type">Auction</p> : item.listingtype == "AuctionWithBIN" ? <p className="Sub_Info_Type">Buy It Now + Auction</p> : item.listingtype == "FixedPrice" || "StoreInventory" ? <p className="Sub_Info_Type">Buy It Now</p>  : null}
 
                     </div>  
                     {/* <hr style={{marginLeft:'.8rem', marginRight: '.8rem'}}/>
@@ -63,32 +63,32 @@ console.log(item.buyitnow, "ayyy")
         </div>
     )
 }
-const ImageContainer = {
-    backgroundColor:'white', 
-    display: 'block',
-    width:'17.8vw',
-    height:'24.5vh',
-marginLeft:'3%',
-// borderWidth:'thin',
-// borderColor:'black',
-// borderStyle:'solid',
-boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-backgroundRepeat: 'no-repeat',
-textAlign:'center',
-backgroundSize: 'contain',
-backgroundPosition: 'center'
+// const ImageContainer = {
+//     backgroundColor:'white', 
+//     display: 'block',
+//     width:'17.8vw',
+//     height:'24.5vh',
+// marginLeft:'3%',
+// // borderWidth:'thin',
+// // borderColor:'black',
+// // borderStyle:'solid',
+// boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+// backgroundRepeat: 'no-repeat',
+// textAlign:'center',
+// backgroundSize: 'contain',
+// backgroundPosition: 'center'
 
-}
-const ImageStyle = {
-display: 'flex',
-resizeMode: 'contain',
-resizeImage: 'contain',
-marginRight: 'auto',
-marginLeft:'auto',
-    maxWidth: '100%',
-    // width:'auto',
-    maxHeight: '100%',
-  backgroundColor:'white'
-}
+// }
+// const ImageStyle = {
+// display: 'flex',
+// resizeMode: 'contain',
+// resizeImage: 'contain',
+// marginRight: 'auto',
+// marginLeft:'auto',
+//     maxWidth: '100%',
+//     // width:'auto',
+//     maxHeight: '100%',
+//   backgroundColor:'white'
+// }
 
 export default SearchResult

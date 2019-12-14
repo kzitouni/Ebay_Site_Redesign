@@ -9,11 +9,8 @@ const {itemspec} = useContext(Context)
             <div className="Item_Spec_Container1"> 
                 <h1>Item Specifics</h1>
                 <div className="Spec_Box">
-            {/* <p>Condition: {(itemspec != "") ? itemspec.Item.ConditionDisplayName : null} </p>
-            <p>Category Name: {(itemspec != "") ? itemspec.Item.PrimaryCategoryName : null}</p>
-            <p>Item ID: {(itemspec != "") ? itemspec.Item.ItemID : null}</p> */}
             
-            {itemspec.Item.ItemSpecifics.NameValueList == undefined ? null : itemspec.Item.ItemSpecifics.NameValueList.map((item) => (
+            {itemspec.Item.ItemSpecifics == undefined ? null : itemspec.Item.ItemSpecifics.NameValueList == undefined ? null : itemspec.Item.ItemSpecifics.NameValueList.map((item) => (
                         <p style = {{gridArea: 'inherit'}} className="Right_Spec_Cont_Text"><p style={{fontWeight:'bold'}}>{item.Name}:</p> {item.Value}</p>
                         ))}
                     </div>

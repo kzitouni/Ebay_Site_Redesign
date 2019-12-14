@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {Context} from './Context'
 import {IoIosTimer, IoMdEye, IoMdCheckmark, IoIosAirplane} from "react-icons/io";
 import CategoriesData from './CategoriesData'
+import Pagination from './Pagination'
 const Searchbar = () => {
     const {onSubmit, onClick} = useContext(Context)
     const [search, setSearch] = useState("")
@@ -11,7 +12,7 @@ const Searchbar = () => {
     const empty = null
 
     const newarr = CategoriesData.GetCategoryInfoResponse.map((item) => {
-        return(<option value={`&categoryId=${item.CategoryID}`} >{item.CategoryNamePath}</option>)
+        return(<option value={item.CategoryID == "" ? "" : `&categoryId=${item.CategoryID}`} >{item.CategoryNamePath}</option>)
     })
     const handleChange = (e) => {
         setCategory(e.target.value)
@@ -22,11 +23,10 @@ const Searchbar = () => {
             <Link to="/">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/EBay_logo.png/128px-EBay_logo.png" style={{}}/>
             </Link>
-            <div style={{width:'25vh'}}></div>
+            <div style={{width:'144.5px'}}></div>
             <div className="Header_Search">
             <input className="InputBar" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search" />
                 <select className="Category_Select" name={category} onChange={handleChange} >
-                <option value="" >All Categories</option>
                 {newarr}
                 </select>
                 <Link to="/">
@@ -45,6 +45,8 @@ const Searchbar = () => {
             <IoMdEye size={20} className="Watch_Eye"/>
                 <p className="WatchList_Header">Watch List</p>
                 </Link>
+                <Pagination />
+
             </div>
 
 

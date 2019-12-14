@@ -6,6 +6,7 @@ import {FiPackage} from 'react-icons/fi'
 import {GiCardboardBox} from 'react-icons/gi'
 import {AiOutlineShoppingCart} from "react-icons/ai";
 import Slider from './ImageSlider/Slider'
+import ProductIcons from './ProductIcons';
 const AuctionBox = (item) => {
     
     const {product, itemspec, watchlist, setWatchlist, savedlist} = useContext(Context)
@@ -22,6 +23,9 @@ const pushitems = {
     picture: itemspec.Item.PictureURL[0], listingtype: itemspec.Item.ListingType,
     condition: itemspec.Item.ConditionDisplayName
 }
+
+
+
 const pushtoWatch = () => (
     
     (found() == false) ? watchlist.push(pushitems) && setWatchingItems(found()) : watchlist.splice(ind, 1) && setWatchingItems(found())
@@ -35,18 +39,18 @@ var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oc
 let today = months[date.getMonth()]
 return (
 <div className="Product_Container">
+<div className="Title_Left_Cont">
     <Slider />
-<div className="ProductPage_Image_Container" style={{backgroundImage: (itemspec != "") ? `url(${itemspec.Item.PictureURL[0]})` : null}}>
-</div>
-<div style={{backgroundColor:'black', width:"10vw", height:"3vh"}}>
-</div>
+    </div>
+{/* <div className="ProductPage_Image_Container" style={{backgroundImage: (itemspec != "") ? `url(${itemspec.Item.PictureURL[0]})` : null}}>
+</div> */}
 <div className="Product_Info"> 
 <hr className="Product_Right_HR" />
 <div className="Condition_Container">
 
 
-{(itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) ) ? <p>  <FiPackage style={{marginRight:'1vw'}} />{(itemspec != "") ? itemspec.Item.ConditionDisplayName : null}</p>
- : (itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") == -1) ) ? <p>  <GiCardboardBox style={{marginRight:'1vw'}} />{(itemspec != "") ? itemspec.Item.ConditionDisplayName : null}</p> : null}
+{(itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) ) ? <p>  <FiPackage style={{marginRight:'12.8px'}} />{(itemspec != "") ? itemspec.Item.ConditionDisplayName : null}</p>
+ : (itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") == -1) ) ? <p>  <GiCardboardBox style={{marginRight:'12.8px'}} />{(itemspec != "") ? itemspec.Item.ConditionDisplayName : null}</p> : null}
 
 </div>
 
@@ -81,50 +85,10 @@ return (
                 </div>
             </button>
             <p className="Bids_Text">6 bids</p>
-        <button className="Bid_Button" >Place Bid
-                </button>
+        <button className="Bid_Button" >Place Bid</button>
         </div>
     </div>
-    <div style={{display:'flex'}}>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <IoIosAirplane className="Plane_Color" />
-        </div>
-    </div>
-    <p className="Shipping_Text">{(itemspec != "") ? itemspec.Item.ShippingCostSummary.ShippingType : null} Service</p>
-    <p className="Shipping_Text_Under">Shipping Service</p>
-        </div>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <FaRegCalendarAlt className="Calendar" />
-        </div>
-    </div>
-<p className="Shipping_Text">Item Ships ({today} {(itemspec != "") ? date.getDate() + itemspec.Item.HandlingTime : null})</p>
-    <p className="Shipping_Text_Under">{(itemspec != "") ? itemspec.Item.HandlingTime : null} Day Handling</p>
-        </div>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <FaFlagUsa className="USA_Text" />
-        </div>
-    </div>
-    <p className="Shipping_Text">{(itemspec != "") ? itemspec.Item.Location : null}</p>
-    <p className="Shipping_Text_Under">Item Location</p>
-
-        </div>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <FaEbay className="Plane_Color" />
-        </div>
-    </div>
-    <p className="Shipping_Text">Ebay Money Back</p>
-    <p className="Shipping_Text_Under" >60 Day Guarantee</p>
-        </div>
-    </div>
-
+   <ProductIcons />
     </div>
 </div>
 )

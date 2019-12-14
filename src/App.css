@@ -54,9 +54,9 @@ time, mark, audio, video {
 
 .ProductPageTitle {
   text-align: left;
-  font-size: 1.2rem ;
+  font-size: 19.2px ;
   font-family: 'Lato', sans-serif;
-
+  min-width: 381px;
 }
 
 .Title_Container {
@@ -95,14 +95,15 @@ font-family: 'Lato', sans-serif;
   background-size: contain;
   /* border: 1px solid red; */
   background-position: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 320px;
 }
 
 .SearchImages {
   background-color: white;
   display: block;
   width:17.8vw;
-  height:24.5vh;
+  height:141.61px;
 margin-left:2vw;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 background-repeat: no-repeat;
@@ -120,12 +121,68 @@ background-position: center;
   background-size: contain;
 }
 
+.Image_Cont {
+  display:flex;
+  margin-bottom:2rem
+}
+
+.Sub_Info_Cont {
+  margin-left:1vw;
+  text-align:left
+}
+
+.Sub_Info_Title {
+  margin-top:12.8px; 
+  margin-bottom:0;
+  text-align:left; 
+  font-size:.9rem;
+  min-width: 510px;
+}
+
+.Sub_Info_Subtitle {
+  margin-top:0;
+  margin-bottom:0;
+  font-size:.68rem
+}
+
+.Sub_Info_Price {
+  text-align:left;
+  font-weight:bold;
+  margin-bottom:0;
+  font-size:.8rem;
+}
+
+.Sub_Info_BuyText {
+  text-align:left;
+  margin-top:2.3120px;
+  margin-bottom:2.3120px;
+  font-size:.5rem;
+  color:grey
+}
+
+.Sub_Info_ShippText {
+  text-align: left;
+    font-weight: bold;
+    margin-top: 2.89px;
+    margin-bottom: 0rem;
+    font-size: 0.5rem;
+    color: grey
+}
+
+.Sub_Info_Type {
+  text-align: left;
+    margin-top: 11.56px;
+    margin-bottom: 0rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
 .ProductPage_ImageSet_Container1{
   background-color: black;
   width: 10vw;
-  height: 15vh;
+  height:86.7px;
   margin-left: 1vw;
-  margin-top: 2vh;
+  margin-top: 11.56px;
   background-size: contain;
 
 }
@@ -148,10 +205,11 @@ background-position: center;
 }
 
 .Product_Info {
-  margin-left: 2rem;
-  margin-top: 1vh;
-  margin-right: 6rem;
-  flex:1
+  margin-left: 51.2px;
+  margin-top: 5.78px;
+  margin-right: 96px;
+  flex: 1 1;
+  width: 43%
 }
 
 .Buy_Container {
@@ -160,30 +218,33 @@ background-position: center;
   /* background-color: blue; */
   margin: auto;
   display:flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ;
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 142px;
 }
 
 .Price_Right_Container{
   width:11.2vw;
   height:25vh;
-  padding: 9.4vh 0;
+  padding: 54.332px 0;
+  min-height: 142px;
 
-}
+} 
 
 .Price_Container{
 width: 22vw;
-height:25vh;
+/* height:25vh; */
 border-right-color: #e6e6e6;
   border-right-style: solid;
   border-right-width: .01vw;
 /* display: flex; */
+min-height: 142px;
+
 }
 
 .Price {
-  margin-top: 6vh;
+  margin-top: 34.68px;
   /* margin-left: 4vw; */
-  font-size: 3vw;
+  font-size: 38.4px;
   text-align: center;
   color:#3e82b9;
   font-family: 'Lato', sans-serif;
@@ -193,22 +254,22 @@ border-right-color: #e6e6e6;
 .Price_Sign  {
   margin-top: 6vh;
   margin-left: .5vw;
-  font-size: 1.8vw;
+  font-size: 23.04px;
   color: #3e82b9
 }
 
 .Price_Text {
-  font-size: .7vw;
+  font-size: 8.96px;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
 
 }
 
 .Purchase_Container {
-  width: 10vw;
+  /* width: 10vw; */
   /* height:7vh; */
-  margin:auto;
-  margin-top: 2vh;
+  margin:auto 5.5vw;
+  margin-top: 11.56px;
   /* background-color: black; */
   display:flex;
 }
@@ -217,11 +278,16 @@ border-right-color: #e6e6e6;
   width:2vw;
   background-color:#a3cb47;
   height:4.5vh;
+  min-height: 25px;
+  min-width: 23.7px;
 }
 
 .Purchase_Left_Auction_Container {
   width:2vw;
   background-color:#a3cb47;
+  height:4.5vh;
+  min-height: 25px;
+  min-width: 23.7px;
   /* height:4.5vh; */
 }
 
@@ -230,27 +296,28 @@ border-right-color: #e6e6e6;
   height: 4.3vh;
   border-bottom-color: #a3cb47;
   border-bottom-style: solid;
-  border-bottom-width: .2vh;
+  border-bottom-width: 1.1360px;
+  min-height: 24.424px;
 }
 
 .Check_Box {
   margin-top: 1vh;
-  font-size: 1.3vw;
+  font-size: 16.64px;
   color: white
 }
 
 .Auction_Dollar_Box {
-  margin-top: .5vh;
-  font-size: 1.3vw;
+  margin-top: 3.5px;
+  font-size: 16.64px;
   color: white;
 }
 
 .Buy_Now_Text {
-  font-size: 1vw;
+  font-size: 12.8px;
   margin-top: .8vh;
   font-weight: 400;
   color: #a3cb47;
-
+  min-width: 81px;
 }
 
 .Purchase_Eye_Icon {
@@ -262,14 +329,14 @@ text-align: center;
 }
 
 .Watch_Item_Text {
-  font-size: .8vw;
+  font-size: 10.24px;
   font-weight: 300;
   text-align: center;
   color: grey;
 }
 
 .Add_Cart_Text {
-  font-size: .8vw;
+  font-size: 10.24px;
   font-weight: 300;
   color: grey;
 }
@@ -280,8 +347,8 @@ text-align: center;
   margin-left: 3.5vw;
   display: flex;
   flex:1;
-  margin-bottom: 4vh;
-  margin-top: 2vh;
+  margin-bottom: 23.12px;
+  margin-top: 11.56px;
 
 }
 
@@ -309,15 +376,15 @@ text-align: center;
   margin-left: 3.5vw;
   display: flex;
   flex:1;
-  margin-bottom: 2vh;
-  margin-top: 4vh;
+  margin-bottom: 11.56px;
+  margin-top: 23.12px;
 }
 
 .Circle_Under_Buy {
   border-radius: 4vw;
   /* background-color: #a3cb47;  */
-  width: 4vw;
-  height: 4vw;
+  width: 51.2px;
+  height: 51.2px;
   margin-left: 3.5vw;
   margin-top: 2.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ;
@@ -332,7 +399,7 @@ width: 100%;
   color: #a3cb47;
   text-align: center;
   margin: auto;
-  font-size: 2.5vw;
+  font-size: 32px;
   height: 100%;
 }
 
@@ -340,7 +407,7 @@ width: 100%;
   color: #a3cb47;
   text-align: center;
   margin: auto;
-  font-size: 2vw;
+  font-size: 25.6px;
   height: 100%;
 }
 
@@ -348,13 +415,13 @@ width: 100%;
   color: #a3cb47;
   text-align: center;
   margin: auto;
-  font-size: 1.5vw;
+  font-size: 19.2px;
   height: 100%;
 }
 
 .Shipping_Text {
   margin-left: 3.5vw;
-    font-size: .7vw;
+    font-size: 8.96px;
     width: 7vw;
     text-align: left;
     margin-top: 1vh;
@@ -363,7 +430,7 @@ width: 100%;
 
 .Shipping_Text_Under {
   margin-left: 3.5vw;
-  font-size: .7vw;
+  font-size: 8.96px;
   width: 7vw;
   text-align: left;
   margin-top: .3vh;
@@ -376,8 +443,9 @@ width: 100%;
   border-bottom-color: #a3cb47;
     border-width: 0px 0px 1px 0px;
     width: 9vw;
-    height: 1.4vw;
+    height: 23px;
     text-align: center;
+    min-height: 23px;
 }
 
 .Auction_Input::placeholder {
@@ -385,57 +453,58 @@ width: 100%;
 }
 
 .Under_Bid_Text {
-  font-size: .7vw;
+  font-size: 8.96px;
   text-align: center;
   margin-top: .3vh;
   color: lightgray;
 }
 
 .Bid_Button {
-  margin-top: 1vh;
+  margin-top: 5.68px;
   color: white;
   background-color: #a3cb47;
   border-width: 0px;
-  width: 7vw;
-  height: 4vh;
+  width: 89.6px;
+  height: 22.72px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1)  ;
-  font-size: 1vw;
+  font-size: 12.8px;
 }
 
 .Bids_Text {
-  font-size: .8vw;
+  font-size: 10.24px;
   font-weight: 300;
   text-align: center;
   color: grey;
-  margin-top: 7vh;
+  margin-top: 39.76px;
 }
 
 .Price_Right_Auction_Container{
   width:11.2vw;
-  height:25vh;
-  padding: 3vh 0;
+  height:144.5px;
+  padding: 17.34px  0;
 }
 
 .Header {
   text-align:left;
   /* margin-left:8rem; */
   display: flex;
-  margin-top: 4vh;
+  margin-top: 23.12px;
 }
 
 .Header_Search {
-  margin-top:3vh;
-  height:6vh;
-  border-color:orange;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 17.34px;
+    height: 34.68px;
+    border-color: orange;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-bottom-color: orange;
-    border-bottom-width: .7vh;
+    border-bottom-width: 4.04599px;
     border-style: solid;
     display: flex;
+    min-width: 359.7px;
 }
 
 .InputBar {
-  height: 5vh;
+  height: 28.9px;
   /* flex:1; */
   width: 35vw;
   /* margin-left:5vw; */
@@ -443,7 +512,7 @@ width: 100%;
   border-bottom-color: #e1b953;
   border-width: 0;
   border-style: solid;
-  font-size: 1vw;
+  font-size: 12.8px;
   display: block !important;
   /* border-bottom-width: .3vh; */
   /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1)  ; */
@@ -451,17 +520,17 @@ width: 100%;
 }
 
 .Category_Select {
-    height: 6.7vh;
+    height: 38.726px;
     width: 10vw;
     /* flex: 1; */
     border-bottom-color: #6ba9d8;
     /* background-color: red; */
     border-width: 0;
-    border-bottom-width: .7vh;
+    border-bottom-width: 4.04599px;
     /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1)  ; */
     border-bottom-style: solid;
     color: #6ba9d8;
-    font-size: 1vw;
+    font-size: 12.8px;
   }
 
 .Search_Icon {
@@ -481,8 +550,8 @@ width: 100%;
   align-items: center;
   padding-top:.37rem;
   padding-bottom:.48rem; */
-  height: 6.7vh;
-  width: 3.5vw;
+  height: 38.726px;
+  width: 44.8px;
 }
 
 .App_Header {
@@ -504,12 +573,12 @@ width: 100%;
 }
 
 .Ends_Container {
-margin-top: 4vh;
+margin-top: 15.64px;
 margin-left: 11vw;
 }
 
 .Ends_Container h1 {
-  font-size: .55rem;
+  font-size: 8.8px;
 }
 
 .Search_Container_App {
@@ -527,20 +596,20 @@ margin-left: 11vw;
 }
 
 .Categories_Side_Container p:nth-child(1) {
-  font-size: 1vw;
+  font-size: 12.8px;
   font-weight: bold;
 }
 
 .Categories_Side_Container p:nth-child(2) {
-  font-size: 1vw;
-  margin-top: 1vh;
+  font-size: 12.8px;
+  margin-top: 5.78px;
 }
 
 .Category_Button_Text {
   border: none;
   background-color: inherit;
   padding: 3px 0px 3px 0px;
-  font-size: 1vw;
+  font-size: 12.8px;
   cursor: pointer;
   display: block;
   text-align: left;
@@ -558,24 +627,24 @@ margin-left: 11vw;
 }
 
 .Seller_Text {
-  margin-top: 5vh;
-  font-size: 1vw;
-  margin-left: 5.5vw;
+  margin-top: 26.01px;
+  font-size: 12.43px;
+  margin-left: 70.4px;
 }
 
 .Rating_Bar {
   background-color: red;
     width: 8vw;
-    height: 1vh;
-    margin-left: 5.5vw;
+    height: 5.78px;
+    margin-left: 70.4px;
     border-radius: 16px;
-    margin-top: 1vh;
+    margin-top: 5.78px;
 }
 
 .Rating_Bar_div {
   background-color: #a7ce4a;
   width: 92.3%;
-  height: 1vh;
+  height: 5.78px;
   border-radius: 16px;
 }
 
@@ -583,30 +652,31 @@ margin-left: 11vw;
   display: flex;
   /* vertical-align: middle;
   text-align: center; */
-  margin-top: 1vh;
+  margin-top: 5.78px;
 }
 
 .Rating_Text {
-  font-size: .8vw;
+  font-size: 9.944px;
   margin-left: .5vw;
   color: grey;
 }
 
 .Star_Icon {
     color: gold;
-    margin-top: 4vh;
+    margin-top: 23.12px;
 }
 
 .Top_Seller_Text {
-  font-size: .5vw;
+  font-size: 6.215px;
+  min-width: 27px;
 }
 
 .Product_Right_HR {
-  width: 82%;
+  width: 32vw;
 }
 
 .Product_Bottom_HR{
-  margin-top: 7vh;
+  margin-top: 40.46px;
 }
 
 .Description_Container{
@@ -640,7 +710,7 @@ margin-left: 11vw;
   border-width: 0px;
   padding: 10px 20px;
   text-align: center;
-  font-size: 1.1vw;
+  font-size: 14.08px;
 }
 
 .Unhighlighted_Spec_Button{
@@ -651,7 +721,7 @@ margin-left: 11vw;
   border-width: 0px;
   padding: 10px 20px;
   text-align: center;
-  font-size: 1.1vw;
+  font-size: 14.08px;
 }
 
 .Unhighlighted_Shipping_Button{
@@ -660,7 +730,7 @@ margin-left: 11vw;
   border-width: 0px;
   padding: 10px 20px;
   text-align: center;
-  font-size: 1.1vw;
+  font-size: 14.08px;
 }
 
 .Highlighted_Shipping_Button{
@@ -669,7 +739,7 @@ margin-left: 11vw;
   border-width: 0px;
   padding: 10px 20px;
   text-align: center;
-  font-size: 1.1vw;
+  font-size: 14.08px;
 }
 
 .Description_Cont_Cont {
@@ -684,7 +754,7 @@ margin-left: 11vw;
 }
 
 .Item_Spec_Container {
-  margin-top: 5vh;
+  margin-top: 28.9px;
 text-align: center;
 }
 
@@ -719,7 +789,7 @@ border-bottom-color: grey; */
 .Item_Spec_Container1 h1:nth-child(1){
   text-align: left;
   padding: 1vh 3vh;
-  font-size: 1.2vw;
+  font-size: 15.36px;
   
   }
 
@@ -731,7 +801,7 @@ border-bottom-color: grey; */
 }
 
 
-    .Spec_Box div:nth-child(1) p:nth-child(1){
+    /* .Spec_Box div:nth-child(1) p:nth-child(1){
 text-align: left;
 padding: 1vh 5vw;
 font-size: 1vw;
@@ -748,7 +818,7 @@ font-size: 1vw;
     text-align: left;
     padding: 1vh 5vw;
     font-size: 1vw;
-    }
+    } */
 
 
   .Right_Spec_Cont {
@@ -759,7 +829,7 @@ font-size: 1vw;
   .Right_Spec_Cont_Text {
     text-align: left;
     padding: 1vh 5vw;
-    font-size: 1vw;
+    font-size: 12.8px;
   }
 
   .About_Cont{
@@ -784,6 +854,7 @@ font-size: 1vw;
   height: 4vh;
   background-color: #f0f0f0;
   display: flex;
+  min-height: 23px
 }
 
 .Shipping_Bar_Text_Cont {
@@ -792,15 +863,19 @@ font-size: 1vw;
 
 .Shipping_Bar_Text{
   text-align: left;
-    padding: 1vh 2vw;
-    font-size: 1vw;
+    padding: 5.78px 25.6px;
+    font-size: 12.79px;
 }
 
 .Shipping_Bar_Title{
   text-align: left;
-    padding: 1vh 2vw;
-    font-size: .8vw;
+    padding: 5.78px 25.6px;
+    font-size: 10.24px;
     font-weight: bold;
+}
+
+.Desc_Titles {
+  padding: 10px;
 }
 
 .Return_Bar_Text_Cont {
@@ -813,32 +888,31 @@ font-size: 1vw;
 
 .Return_Bar_Title{
   text-align: left;
-    padding: 1vh 2vw;
-    font-size: .7vw;
+    padding: 5.78px 25.6px;
+    font-size: 10.24px;
     font-weight: bold;   
 }
 .Payment_Bar_Title{
   text-align: center;
-  padding: 1vh 2vw;
-  font-size: .7vw;
+  padding: 5.78px 25.6px;
+  font-size: 8.96px;
   font-weight: bold;
 }
 
 .Return_Bar_Text {
   text-align: left;
-    padding: 1vh 2vw;
-    font-size: 1vw;
+    padding: 5.78px 25.6px;
+    font-size: 12.8px;
 }
 
 .Payment_Bar_Text {
   text-align: center;
-    padding: 1vh 2vw;
-    font-size: 1vw;
+    font-size: 12.8px;
 }
 
 .Shipping_Bar_Answer {
   width: 100%;
-  height: 4vh;
+  height: 23.12px;
   display: flex;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -850,7 +924,7 @@ font-size: 1vw;
 }
 
 .Payment_Cont{
-  height: 15vh;
+  height: 86.7px;
   width: 80%;
   border: lightgrey;
   border-width: 1px;
@@ -976,11 +1050,11 @@ height: 100%;
 .Left_Search {
   text-align: center;
   display: flex;
-  margin-top: 1vh;
+  margin-top: 5.78px;
 }
 
 .WatchList_Header {
-  font-size: .6vw;
+  font-size: 7.68px;
   margin-left: .6vw;
   color: #a3cb47;
 }
@@ -991,13 +1065,258 @@ height: 100%;
     color: #a3cb47
 }
 
+.Icon_Cont {
+  width: 10vw;
+  text-align: center;
+}
+
 .Watch_Container{
   border-radius: 40px;
-    background-color: white;
-    width: 4vw;
-    height: 4vw;
-    display: grid;
-    margin-left: 3vw;
-    margin-top: .6vw;
-    grid-template-rows: repeat(2, 1fr);
+  background-color: white;
+  width: 51.2px;
+  height: 51.2px;
+  display: grid;
+  margin-left: 3vw;
+  margin-top: 3.468px;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.Title_Left_Cont {
+  width:46vw;
+  text-align:center;
+  margin: auto 3vw auto auto;
+  /* margin-right:3vw */
+}
+
+.Sub_Info_Price_Cont {
+  width: 11vw;
+}
+
+.Title_Section_Cont {
+  display: block;
+  width: 50%;
+}
+@media only screen and (max-width: 1000px) {
+ .Title_Container {
+   margin-left: 110px;
+ }
+ .Shipping_Text_Under {
+   margin-left: 35px;
+ }
+ .Price_Right_Auction_Container {
+   width: 112px;
+   padding: 30px 0px;
+ }
+ .Title_Section_Cont {
+   width: 491px;
+ }
+ .Categories_Left {
+   display: none;
+ }
+ .Category_Select {
+   display: none;
+ }
+ .Title_Left_Cont {
+  width: 460px;
+  margin: auto 30px auto auto;
+}
+.Seller_Container {
+  width: 491.67px;
+}
+.Product_Info {
+  width: 400px;
+}
+/* .ProductPage_Image_Container {
+  width: 239.2px;
+} */
+.Eye {
+  margin-left: 110px;
+  margin-right: 4px;
+}
+.Time {
+  margin-left: 40px;
+  margin-right: 4px;
+}
+.carousel.carousel-slider{
+  width: 406.5px !important;
+}
+.Product_Right_HR {
+  width: 320px;
+}
+.Condition_Container {
+  margin-left: 35px;
+}
+.Quantity_Container {
+  margin-left: 35px;
+}
+.Buy_Container {
+  width: 330px;
+  height: 131.75px;
+}
+.Price_Container {
+  width: 220px;
+}
+.Price_Right_Container {
+  width: 112px;
+}
+.Rating_Text {
+  margin-left: 5px;
+}
+.Rating_Bar {
+  width: 80px;
+}
+.Buy_Container{ 
+  margin: auto 35px;
+}
+.Icon_Cont{
+  width: 100px;
+}
+.Circle_Under_Buy {
+  margin-left: 35px;
+  margin-top: 25px;
+  border-radius: 40px;
+}
+.Shipping_Text {
+  margin-left: 35px;
+  width: 70px;
+  margin-top:  5.27px;
+}
+.Selector {
+  margin-left: 20px;
+  width: 40px;
+}
+.Check_Box {
+  margin-top: 5.28px;
+}
+.Purchase_Right_Container {
+  width: 90px;
+}
+.Purchase_Left_Container {
+  width: 20px;
+}
+.ProductPage_ImageSet_Container1 {
+  width: 100px;
+  margin-left: 10px;
+}
+.Item_Ship_Container1 {
+  width: 788.67px;
+}
+.Payment_Cont {
+  width: 788.67px;
+}
+.Watch_Title_Text {
+  width: 1000px;
+}
+.Auction_Input {
+  width: 90px;
+}
+.Purchase_Container {
+  margin: 11.5px 55px 0 55px;
+}
+ 
+}
+@media only screen and (max-width: 900px) {
+  .Sub_Info_Cont {
+    margin-left: 7px;
+  }
+  .Trash_Container {
+    margin-left: 27px;
+  }
+  .Sub_Info_Price_Cont {
+   width: 99px;
+ }
+ .SearchImages {
+   width: 160.2px;
+   margin-left: 18px;
+ }
+ 
+ .Ends_Container {
+ margin-left: 98px;
+ }
+ .InputBar {
+   width: 317.56px;
+ }
+ .Search_Container {
+  min-width: 44.79px;
+ }
+ .App_Header {
+  min-width: 742px;
+  width: 742px;
+  margin: 24.5px 70px;
+ }
+ .Watch_Container{
+   margin-left: 27px;
+ }
+ .Watch_Eye {
+  margin-top: 6.3px;
+  margin-left: 9.9px;
+ }
+.Purchase_Left_Auction_Container {
+  width: 20px;
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .Item_Spec_Container1 {
+    margin: auto 77px;
+    min-width: 628.67px;
+  }
+  .Right_Spec_Cont_Text {
+    padding: 5.68px 40px;
+    min-width: 230px;
+  }
+  .About_Cont {
+    min-width: 628.67px;
+    margin: 28.9px 77px;
+  }
+}
+
+.current-page {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.country-card-container {
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.country-name {
+  font-size: 14.4px;
+}
+
+.country-region {
+  font-size: 11.2px;
+}
+
+.country-page,
+.country-name,
+.country-region {
+  line-height: 1;
+}
+
+ul.pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+ul.pagination li.page-item.active a.page-link {
+  color: #445565 !important;
+  background-color: #e3e7eb !important;
+  border-color: #ced4da !important;
+}
+ul.pagination a.page-link {
+  padding: 0.75rem 1rem;
+  min-width: 3.5rem;
+  text-align: center;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  color: #6b88a4;
+  font-weight: 900;
+  font-size: 16px;
+}
+ul.pagination a.page-link:hover {
+  background-color: #f4f4f4;
 }

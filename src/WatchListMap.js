@@ -9,7 +9,7 @@ const WatchListMap = () => {
     ))
 
     return (<div>
-      <h1>Your Watch List</h1>
+      <h1 className="Watch_Title_Text">Your Watch List</h1>
         {Elements}
     </div>
     )

@@ -6,20 +6,20 @@ const ReturnPolicy = () => {
     const {itemspec} = useContext(Context)
 return (
     <div className="Item_Ship_Container1"> 
-    <h1>Return Policy</h1>
+    <h1 className="Desc_Titles">Return Policy</h1>
     
     <div style={{display:'block'}} className="Spec_Box">
     {(itemspec != "") ? (itemspec.Item.ReturnPolicy.ReturnsAccepted == "Returns Accepted" ? 
     <div>
             <div className="Shipping_Bar">
             <div className="Return_Bar_Text_Cont">
-            <p className="Return_Bar_Title" style={{fontSize:'.8vw'}} >After receiving the item, contact seller within</p>
+            <p className="Return_Bar_Title"  >After receiving the item, contact seller within</p>
             </div>
             <div className="Return_Bar_Text_Cont">
-            <p className="Return_Bar_Title" style={{ fontSize:'.8vw'}} >Refund will be given as</p>
+            <p className="Return_Bar_Title"  >Refund will be given as</p>
             </div>
             <div className="Return_Bar_Text_Cont">
-            <p className="Return_Bar_Title" style={{fontSize:'.8vw'}} >Return shipping</p>
+            <p className="Return_Bar_Title"  >Return shipping</p>
             </div>
             
                     </div>

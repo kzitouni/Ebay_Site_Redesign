@@ -7,6 +7,7 @@ import {GiCardboardBox} from 'react-icons/gi'
 import {AiOutlineShoppingCart} from "react-icons/ai";
 import ProductPageImages from './ProductPageImages'
 import Slider from './ImageSlider/Slider'
+import ProductIcons from './ProductIcons';
 
 
 const BuyBox = (item) => {
@@ -45,7 +46,7 @@ var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oc
 let today = months[date.getMonth()]
 return (
 <div className="Product_Container">
-    <div style={{width:'46vw', textAlign:'center', margin:'auto', marginRight:'3vw'}}>
+    <div className="Title_Left_Cont">
 {/* <ProductPageImages /> */}
 <Slider />
     </div>
@@ -53,8 +54,8 @@ return (
 <hr className="Product_Right_HR" />
 <div className="Condition_Container">
 {(itemspec != "" && itemspec.Item.ConditionDisplayName != undefined) ? 
-((itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) ? <p>  <FiPackage style={{marginRight:'1vw'}} />{itemspec.Item.ConditionDisplayName} </p>
-: <p>  <GiCardboardBox style={{marginRight:'1vw'}} /> {itemspec.Item.ConditionDisplayName} </p>) : null}
+((itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) ? <p>  <FiPackage style={{marginRight:'10px'}} />{itemspec.Item.ConditionDisplayName} </p>
+: <p>  <GiCardboardBox style={{marginRight:'10px'}} /> {itemspec.Item.ConditionDisplayName} </p>) : null}
 
 
 {/* {(itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) ) 
@@ -91,7 +92,7 @@ return (
             <button className="Image_Button">   
             <div className="Purchase_Container">
                 <div className="Purchase_Left_Container">
-                    <div>
+                    <div style={{minHeight:'24.48px', minWidth:'23.7px'}}>
                     <IoMdCheckmark className="Check_Box" />
                     </div>
                 </div>
@@ -105,7 +106,7 @@ return (
         <div className="Price_Right_Container">
             <button className="Add_To" onClick={() => {pushtoWatch()}} >
             <div className="Purchase_Eye_Icon">
-        <h1 className="Watch_Item_Text" style={{color: watchingItems ? '#a3cb47' : 'grey'}}><IoMdEye size={10} style={{marginRight:'.5vw'}} />{watchingItems === false ? "Watch Item" : "Watching"}
+        <h1 className="Watch_Item_Text" style={{color: watchingItems ? '#a3cb47' : 'grey'}}><IoMdEye size={10} style={{marginRight:'5px'}} />{watchingItems === false ? "Watch Item" : "Watching"}
     </h1>
 
             </div>
@@ -113,51 +114,13 @@ return (
             </button>
             <button className="Add_To">
             <div className="Purchase_Cart_Icon">
-       <h1 className="Add_Cart_Text"> <AiOutlineShoppingCart size={10} style={{marginRight:'.5vw'}}/>Add to Cart</h1>
+       <h1 className="Add_Cart_Text"> <AiOutlineShoppingCart size={10} style={{marginRight:'5px'}}/>Add to Cart</h1>
             </div>
 
             </button>
         </div>
     </div>
-    <div style={{display:'flex'}}>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <IoIosAirplane className="Plane_Color" />
-        </div>
-    </div>
-<p className="Shipping_Text">{(itemspec != "") ? itemspec.Item.ShippingCostSummary.ShippingType : null} Service</p>
-    <p className="Shipping_Text_Under">Shipping Service</p>
-        </div>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <FaRegCalendarAlt className="Calendar" />
-        </div>
-    </div>
-<p className="Shipping_Text">Item Ships ({today} {(itemspec != "") ? date.getDate() + itemspec.Item.HandlingTime : null})</p>
-    <p className="Shipping_Text_Under">{(itemspec != "") ? itemspec.Item.HandlingTime : null} Day Handling</p>
-        </div>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <FaFlagUsa className="USA_Text" />
-        </div>
-    </div>
-    <p className="Shipping_Text">{(itemspec != "") ? itemspec.Item.Location : null}</p>
-    <p className="Shipping_Text_Under">Item Location</p>
-
-        </div>
-        <div style={{width:'10vw', textAlign:'center'}}>
-    <div className="Circle_Under_Buy" >
-        <div>
-        <FaEbay className="Plane_Color" />
-        </div>
-    </div>
-    <p className="Shipping_Text">Ebay Money Back</p>
-    <p className="Shipping_Text_Under" >60 Day Guarantee</p>
-        </div>
-    </div>
+<ProductIcons />
 
     </div>
 </div>

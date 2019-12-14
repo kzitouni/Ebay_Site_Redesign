@@ -7,14 +7,14 @@ const {itemspec} = useContext(Context)
     return (
         <div className="Item_Spec_Container">
         <div className="Item_Ship_Container1"> 
-            <h1>Shipping & Handling</h1>
+            <h1 className="Desc_Titles">Shipping & Handling</h1>
             <div style={{display:'block'}} className="Spec_Box">
                 <div className="Left_Box">
-        <p>Item Location: {(itemspec != "") ? (itemspec.Item.Location) : null}</p>
+        {/* <p>Item Location: {(itemspec != "") ? (itemspec.Item.Location) : null}</p> */}
                 </div>
                 <div className="Shipping_Bar">
 <div className="Shipping_Bar_Text_Cont">
-    <p className="Shipping_Bar_Title" style={{fontSize:'.8vw'}} >Shipping Cost</p>
+    <p className="Shipping_Bar_Title" >Shipping Cost</p>
 </div>
 <div className="Shipping_Bar_Text_Cont">
     <p className="Shipping_Bar_Title" >Ships To</p>
@@ -37,22 +37,22 @@ const {itemspec} = useContext(Context)
     <p className="Shipping_Bar_Text" >{(itemspec != "") ? (itemspec.Item.ShippingCostSummary.ShippingType == "Calculated" ? "Did not Specify" : itemspec.Item.ShippingCostSummary.ShippingType) : null}</p>
 </div>
 <div className="Shipping_Bar_Text_Cont">
-    <p className="Shipping_Bar_Text" >Taxes may be applicable at checkout</p>
+    <p className="Shipping_Bar_Text" >Tax may apply at checkout</p>
 </div>
                 </div>
             </div>
 
 
         </div>
-        <div style={{height:'5vh'}}></div>
+        <div style={{height:'28.9px'}}></div>
   <ReturnPolicy />
-        <div style={{height:'5vh'}}></div>
+        <div style={{height:'28.9px'}}></div>
         <div className="Payment_Cont"> 
-            <h1 className="Payment_Text">Payment Details</h1>
+            <h1 className="Desc_Titles">Payment Details</h1>
             <div style={{display:'block'}} className="Spec_Box">
                 <div className="Shipping_Bar" >
 <div className="Payment_Bar_Text_Cont" >
-    <p className="Payment_Bar_Title" style={{fontSize:'.8vw', textAlign:'center'}} >Payment Methods</p>
+    <p className="Payment_Bar_Title" style={{ textAlign:'center'}} >Payment Methods</p>
 </div>
 
                 </div>

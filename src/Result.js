@@ -12,12 +12,15 @@ const Result = () => {
     //     }
     // let Elements
     // if(product.searchResult.length >0){
-
+        // const LEFT_PAGE = 'LEFT';
+        // const RIGHT_PAGE = 'RIGHT';
      const Elements = product.map((item) => (
+
          (item.paginationOutput[0].totalEntries[0] != "0") ? 
 (        <div>
             {item.searchResult[0].item.map((t) => (
-                <SearchResult item={t.galleryURL} title={t.title} itemId={t.itemId} subtitle={t.subtitle} conditionDisplayName={t.conditionDisplayName} 
+                <SearchResult index={t.itemId} item={t.galleryURL} title={t.title} itemId={t.itemId} subtitle={t.subtitle} 
+                conditionDisplayName={t.condition == undefined ? null : t.condition[0].conditionDisplayName[0]} 
                 shipping={t.shippingInfo[0].shippingType[0]} 
                 shippingcost={t.shippingInfo[0].shippingType[0]}   
                 price={t.sellingStatus[0].currentPrice[0].__value__} 
@@ -27,11 +30,18 @@ const Result = () => {
                 ))
         }
         </div>) : <h1>No matches found for that search</h1>
-    )) 
+    ))
+    
+        // const Page = product.map((item) => (
+        //     item.paginationOutput[0].totalEntries[0] != "0" ?
+        // <h1>{item.paginationOutput[0].totalEntries[0]}</h1>
+        // : null
+        // ))
     // else {Elements = <h1>no Search</h1>}
+    // console.log(product !== null || undefined ? product[0].ack[0] : null,"ayy")
     return (
-        <div >
-            {Elements}
+        <div>
+            {product != "" ? Elements : null}
         </div>
     )
 }

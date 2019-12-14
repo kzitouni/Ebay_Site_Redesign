@@ -5,6 +5,8 @@ import {FaDollarSign, FaRegCalendarAlt, FaEbay, FaFlagUsa} from 'react-icons/fa'
 import {FiPackage} from 'react-icons/fi'
 import {GiCardboardBox} from 'react-icons/gi'
 import {AiOutlineShoppingCart} from "react-icons/ai";
+import ProductIcons from './ProductIcons';
+import Slider from './ImageSlider/Slider'
 const AuctionBuyBox = (item) => {
 
 	const {product, itemspec, watchlist, setWatchlist, savedlist} = useContext(Context)
@@ -36,7 +38,10 @@ let today = months[date.getMonth()]
 console.log((itemspec.Item.ConvertedCurrentPrice.Value).toString(), "ay")
 return (
 <div className="Product_Container">
-	<div className="ProductPage_Image_Container" style={{backgroundImage: (itemspec != "") ? `url(${itemspec.Item.PictureURL[0]})` : null}}></div>
+<div className="Title_Left_Cont">
+{/* <ProductPageImages /> */}
+<Slider />
+    </div>
 	<div className="Product_Info">
 		<hr className="Product_Right_HR" />
 		<div className="Condition_Container">
@@ -112,49 +117,12 @@ return (
 					</h1>
 				</div>
                 </button>
-                <p className="Bids_Text" style={{marginTop:'16vh'}}>{(itemspec != "") ?  (itemspec.Item.BidCount) : null} bids</p>
+                <p className="Bids_Text" style={{marginTop:'92.48px'}}>{(itemspec != "") ?  (itemspec.Item.BidCount) : null} bids</p>
         <button className="Bid_Button" style={{}} >Place Bid
                 </button>
 			</div>
 		</div>
-		<div style={{display:'flex'}}>
-			<div style={{width:'10vw', textAlign:'center'}}>
-				<div className="Circle_Under_Buy" >
-					<div>
-						<IoIosAirplane className="Plane_Color" />
-					</div>
-				</div>
-				<p className="Shipping_Text">{(itemspec != "") ? itemspec.Item.ShippingCostSummary.ShippingType : null} Service</p>
-				<p className="Shipping_Text_Under">Shipping Service</p>
-			</div>
-			<div style={{width:'10vw', textAlign:'center'}}>
-				<div className="Circle_Under_Buy" >
-					<div>
-						<FaRegCalendarAlt className="Calendar" />
-					</div>
-				</div>
-				<p className="Shipping_Text">Item Ships ({today} {(itemspec != "") ? date.getDate() + itemspec.Item.HandlingTime : null})</p>
-				<p className="Shipping_Text_Under">{(itemspec != "") ? itemspec.Item.HandlingTime : null} Day Handling</p>
-			</div>
-			<div style={{width:'10vw', textAlign:'center'}}>
-				<div className="Circle_Under_Buy" >
-					<div>
-						<FaFlagUsa className="USA_Text" />
-					</div>
-				</div>
-				<p className="Shipping_Text">{(itemspec != "") ? itemspec.Item.Location : null}</p>
-				<p className="Shipping_Text_Under">Item Location</p>
-			</div>
-			<div style={{width:'10vw', textAlign:'center'}}>
-				<div className="Circle_Under_Buy" >
-					<div>
-						<FaEbay className="Plane_Color" />
-					</div>
-				</div>
-				<p className="Shipping_Text">Ebay Money Back</p>
-				<p className="Shipping_Text_Under" >60 Day Guarantee</p>
-			</div>
-		</div>
+		<ProductIcons />
 	</div>
 </div>
 )

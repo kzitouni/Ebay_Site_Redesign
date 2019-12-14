@@ -29,7 +29,7 @@ let endingTime3 = (itemspec != "") ? (endingTime.lastIndexOf("H") == -1 ? ending
         <div>
            <hr className="ProductPage_HR" />
            <div style={{display:'flex'}}>
-               <div style={{display: 'block', width: '50%'}}>
+               <div className="Title_Section_Cont" >
             <div className="Title_Container">
     <h1 className="ProductPageTitle">  {(itemspec != "") ? itemspec.Item.Title : null}</h1>
       
@@ -44,7 +44,7 @@ let endingTime3 = (itemspec != "") ? (endingTime.lastIndexOf("H") == -1 ? ending
             <div style={{display:'flex'}}>
             <p className="Seller_Text" >{(itemspec != "") ? itemspec.Item.Seller.UserID : null} </p>
             {(itemspec != "") ? (itemspec.Item.Seller.TopRatedSeller ? 
-            <div style={{marginLeft:'.8vw'}}>
+            <div style={{marginLeft:'10.24px'}}>
             <IoIosStar className="Star_Icon"></IoIosStar>
             <p className="Top_Seller_Text">Top Seller</p>
             </div> : null)
@@ -60,7 +60,7 @@ let endingTime3 = (itemspec != "") ? (endingTime.lastIndexOf("H") == -1 ? ending
             
         </div>
         </div>
-        {(itemspec != "") ? (itemspec.Item.ListingType == "FixedPriceItem" ? <BuyBox /> : itemspec.Item.ListingType == "Chinese" ? <AuctionBuyBox /> : itemspec.Item.ListingType == "Auction" ? <AuctionBox /> : <AuctionBuyBox />)  : null}
+        {(itemspec != "") ? (itemspec.Item.ListingType == "FixedPriceItem" ? <BuyBox /> : itemspec.Item.ListingType == "Chinese" && itemspec.Item.BuyItNowPrice == undefined ? <AuctionBox /> : itemspec.Item.ListingType == "Chinese" ? <AuctionBuyBox /> : itemspec.Item.ListingType == "Auction" ? <AuctionBox /> : <AuctionBuyBox />)  : null}
         </div>
     )
 }

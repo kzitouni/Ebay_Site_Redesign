@@ -33,23 +33,24 @@ const [deleted, setDeleted] = useState(true)
     return (
         <div>
         {deleted ?
-        (<div style = {{marginBottom:'25px'}}>
+        (<div >
             <div style = {{display:"flex", marginBottom:'2rem'}}>
                <div className="Trash_Container" >
                    <button onClick={() => deleteitem()}>
-                   <MdDeleteForever style={{fontSize:"2vw"}}  />
+                   <MdDeleteForever style={{fontSize:"20px"}}  />
                    </button>
                    </div> 
-                <div className="SearchImages" style={{backgroundImage:`url(${item.picture})`, marginLeft:"5vw"}}>
+                   <div className="Image_Cont" >
+                <div className="SearchImages" style={{backgroundImage:`url(${item.picture})`}}>
                 </div>
-                <div style={{ marginLeft:'1vw', textAlign:'left'}}>
-                <Link to={`/product${item.itemid}`}>  <p onClick={() => itemFetch(item.itemid)} style={{marginTop:'.8rem', marginBottom:'0rem', textAlign:'left', fontSize:'.9rem'}}>{item.title}</p> </Link>
-    <p style={{marginTop:'0rem', marginBottom:'0rem', fontSize:'.68rem'}}>{item.condition}</p>
+                <div className="Sub_Info_Cont" >
+                <Link to={`/product${item.itemid}`}>  <p onClick={() => itemFetch(item.itemid)} className="Sub_Info_Title">{item.title}</p> </Link>
+    <p className="Sub_Info_Subtitle" >{item.condition}</p>
                     <div className="Left_Search" >
-                    <div style={{width:'11vw'}}>
-    <p style={{textAlign:'left', fontWeight:'bold', marginBottom:'0rem', fontSize:'.8rem'}}>${item.price}</p>
-                    <p style={{textAlign:'left', marginTop:'.5vh', marginBottom:'0rem', fontSize:'.5rem', color:'grey'}}>+ Shipping</p>
-    <p style={{textAlign:'left', marginTop:'2vh', marginBottom:'0rem', fontSize:'.7rem', fontWeight:'bold'}}>{item.listingtype == "AuctionWithBIN" ? "Buy It Now + Auction" : item.listingtype == "FixedPrice" || "StoreInventory" ? "Buy It Now" : console.log(item.listingtype)}</p>
+                    <div className="Sub_Info_Price_Cont" >
+    <p  className="Sub_Info_Price">${item.price}</p>
+                    <p className="Sub_Info_ShippText" >+ Shipping</p>
+    <p className="Sub_Info_Type">{item.listingtype == "AuctionWithBIN" ? "Buy It Now + Auction" : item.listingtype == "FixedPrice" || "StoreInventory" ? "Buy It Now" : console.log(item.listingtype)}</p>
 
                     </div>  
                    
@@ -58,6 +59,7 @@ const [deleted, setDeleted] = useState(true)
                     </div>
                    
                     </div>
+                </div>
                 </div>
             </div>
             <hr style={{marginTop:'25px'}}/>
