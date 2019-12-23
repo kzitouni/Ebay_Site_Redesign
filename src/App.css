@@ -20,6 +20,12 @@ time, mark, audio, video {
     font-family: 'Lato', sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 ::placeholder {
   color: #e1b953;
 }
@@ -93,7 +99,6 @@ font-family: 'Lato', sans-serif;
   background-image: none;
   background-repeat: no-repeat;
   background-size: contain;
-  /* border: 1px solid red; */
   background-position: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-width: 320px;
@@ -215,7 +220,6 @@ background-position: center;
 .Buy_Container {
   width: 33vw;
   height:25vh;
-  /* background-color: blue; */
   margin: auto;
   display:flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -232,18 +236,15 @@ background-position: center;
 
 .Price_Container{
 width: 22vw;
-/* height:25vh; */
 border-right-color: #e6e6e6;
   border-right-style: solid;
   border-right-width: .01vw;
-/* display: flex; */
 min-height: 142px;
 
 }
 
 .Price {
   margin-top: 34.68px;
-  /* margin-left: 4vw; */
   font-size: 38.4px;
   text-align: center;
   color:#3e82b9;
@@ -266,11 +267,8 @@ min-height: 142px;
 }
 
 .Purchase_Container {
-  /* width: 10vw; */
-  /* height:7vh; */
   margin:auto 5.5vw;
   margin-top: 11.56px;
-  /* background-color: black; */
   display:flex;
 }
 
@@ -288,7 +286,6 @@ min-height: 142px;
   height:4.5vh;
   min-height: 25px;
   min-width: 23.7px;
-  /* height:4.5vh; */
 }
 
 .Purchase_Right_Container {
@@ -362,8 +359,6 @@ text-align: center;
   text-align: center;
   text-align-last:center;
   color: #3e82b9;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ; */
-
 }
 
 .Selector_Option_Text {
@@ -382,7 +377,6 @@ text-align: center;
 
 .Circle_Under_Buy {
   border-radius: 4vw;
-  /* background-color: #a3cb47;  */
   width: 51.2px;
   height: 51.2px;
   margin-left: 3.5vw;
@@ -440,8 +434,6 @@ width: 100%;
 }
 
 .Auction_Input {
-  border-bottom-color: #a3cb47;
-    border-width: 0px 0px 1px 0px;
     width: 9vw;
     height: 23px;
     text-align: center;
@@ -486,7 +478,6 @@ width: 100%;
 
 .Header {
   text-align:left;
-  /* margin-left:8rem; */
   display: flex;
   margin-top: 23.12px;
 }
@@ -505,37 +496,28 @@ width: 100%;
 
 .InputBar {
   height: 28.9px;
-  /* flex:1; */
   width: 35vw;
-  /* margin-left:5vw; */
   text-align: center;
+  outline: none;
   border-bottom-color: #e1b953;
   border-width: 0;
   border-style: solid;
   font-size: 12.8px;
   display: block !important;
-  /* border-bottom-width: .3vh; */
-  /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1)  ; */
-  /* background-color: black; */
 }
 
 .Category_Select {
     height: 38.726px;
     width: 10vw;
-    /* flex: 1; */
     border-bottom-color: #6ba9d8;
-    /* background-color: red; */
     border-width: 0;
     border-bottom-width: 4.04599px;
-    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1)  ; */
     border-bottom-style: solid;
     color: #6ba9d8;
     font-size: 12.8px;
   }
 
 .Search_Icon {
-  /* width:2rem;
-    height:1rem; */
     text-align: center;
     vertical-align: middle;
     margin-top: .8vh;
@@ -545,11 +527,6 @@ width: 100%;
   background-color:#a7ce4a;
   text-align:center; 
   vertical-align: middle;
-  /* justify-content:center;
-  flex: 1;
-  align-items: center;
-  padding-top:.37rem;
-  padding-bottom:.48rem; */
   height: 38.726px;
   width: 44.8px;
 }
@@ -558,7 +535,6 @@ width: 100%;
   text-align: center;
   margin: auto;
   width: 84%;
-  /* display: inline-block; */
   list-style-type: none;
   margin-bottom: 25px;
 }
@@ -650,8 +626,6 @@ margin-left: 11vw;
 
 .Seller_Container_div {
   display: flex;
-  /* vertical-align: middle;
-  text-align: center; */
   margin-top: 5.78px;
 }
 
@@ -679,32 +653,8 @@ margin-left: 11vw;
   margin-top: 40.46px;
 }
 
-.Description_Container{
-  /* background-color: #f0f0f0; */
-}
-
-/* .Description_Container button:nth-child(1) {
-  margin-left: 8vw;
-  color: white;
-  background-color: #a3cb47;
-  border-width: 0px;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 1.1vw;
-}
-
-.Description_Container button:nth-child(2) {
-  color: white;
-  background-color: #a3cb47;
-  border-width: 0px;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 1.1vw;
-} */
-
 .Highlighted_Spec_Button{
   margin-left: 8vw;
-  /* margin-top: 1vh; */
   color: white;
   background-color: #a3cb47;
   border-width: 0px;
@@ -715,7 +665,6 @@ margin-left: 11vw;
 
 .Unhighlighted_Spec_Button{
   margin-left: 8vw;
-  /* margin-top: 1vh; */
   color: #a3cb47;
   background-color: white;
   border-width: 0px;
@@ -749,7 +698,6 @@ margin-left: 11vw;
 
 .Left_Box {
   text-align: left;
-  /* background-color: white; */
   width: 40%;
 }
 
@@ -766,10 +714,6 @@ border-width: 1px;
 border-style: solid;
 text-align: center;
 margin: auto;
-/* border-bottom-style: solid;
-border-bottom-width: 1px;
-border-bottom-color: grey; */
-/* border-bottom-width: 0px; */
 }
 
 .Item_Ship_Container1 {
@@ -799,27 +743,6 @@ border-bottom-color: grey; */
   width: 100%;
   grid-template-columns: repeat(2,1fr);
 }
-
-
-    /* .Spec_Box div:nth-child(1) p:nth-child(1){
-text-align: left;
-padding: 1vh 5vw;
-font-size: 1vw;
-
-}
-
-.Spec_Box div:nth-child(1) p:nth-child(2){
-  text-align: left;
-  padding: 1vh 5vw;
-  font-size: 1vw;
-  }
-
-  .Spec_Box div:nth-child(1) p:nth-child(3){
-    text-align: left;
-    padding: 1vh 5vw;
-    font-size: 1vw;
-    } */
-
 
   .Right_Spec_Cont {
     text-align: left;
@@ -933,10 +856,6 @@ font-size: 1vw;
   margin: auto;
 }
 
-.Payment_Text{
-  /* margin-left: 1.70vw; */
-}
-
 .About_Section {
   overflow: auto;
   width: 100%;
@@ -955,8 +874,6 @@ font-size: 1vw;
 
 .backArrow {
   display: grid;
-    /* justify-content: center; */
-    /* align-content: center; */
     align-items: center;
   width: 100%;
   height: 100%;
@@ -965,7 +882,6 @@ font-size: 1vw;
   background: white !important;
 }
 .carousel.carousel-slider .control-arrow {
-  /* top: 0; */
   color: white  !important;
   font-size: 26px;
   bottom: 0;
@@ -974,7 +890,6 @@ font-size: 1vw;
   margin: auto !important;
   height: 34vh;
   background-color: #999999 !important;
-  /* margin: auto; */
 }
 
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow{
@@ -991,7 +906,6 @@ font-size: 1vw;
 .nextArrow {
   display: grid;
   justify-content: end;
-  /* align-content: center; */
   align-items: center;
 width: 100%;
 height: 100%;
@@ -1030,9 +944,6 @@ height: 100%;
 .Slider_Grid {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  /* justify-content: center; */
-  /* margin-left: 8vw; */
-  /* align-items: center; */
   justify-content: center;
   align-content: center;
 }
@@ -1040,8 +951,6 @@ height: 100%;
 .Arrow_Cont {
   display: grid;
     grid-template-columns: repeat(2,1fr);
-    /* justify-content: center; */
-    /* align-content: center; */
     align-items: center;
     width: 100%;
     height: 100%;
@@ -1085,7 +994,6 @@ height: 100%;
   width:46vw;
   text-align:center;
   margin: auto 3vw auto auto;
-  /* margin-right:3vw */
 }
 
 .Sub_Info_Price_Cont {
@@ -1096,6 +1004,13 @@ height: 100%;
   display: block;
   width: 50%;
 }
+@media only screen and (max-width: 1050px) {
+  .Seller_Container {
+    margin-left: 0px !important;
+  }
+}
+
+
 @media only screen and (max-width: 1000px) {
  .Title_Container {
    margin-left: 110px;
@@ -1126,9 +1041,7 @@ height: 100%;
 .Product_Info {
   width: 400px;
 }
-/* .ProductPage_Image_Container {
-  width: 239.2px;
-} */
+
 .Eye {
   margin-left: 110px;
   margin-right: 4px;
@@ -1270,6 +1183,30 @@ height: 100%;
     margin: 28.9px 77px;
   }
 }
+@media only screen and (max-width: 700px) {
+  .Seller_Container {
+    display: none;
+  }
+  .Product_Container {
+    display: table-cell;
+  }
+  .Quantity_Container {
+    display: none;
+  }
+  .Condition_Container {
+    display: none;
+  }
+  .Product_Right_HR {
+    display: none;
+  }
+  .Buy_Container{
+    margin: auto 50px;
+    margin-top: 40px;
+  }
+  .Title_Left_Cont {
+    margin: 0px;
+  }
+  }
 
 .current-page {
   font-size: 24px;
