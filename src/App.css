@@ -495,7 +495,7 @@ width: 100%;
 }
 
 .InputBar {
-  height: 28.9px;
+  height: 33px;
   width: 35vw;
   text-align: center;
   outline: none;
@@ -545,6 +545,7 @@ width: 100%;
   font-family: inherit;
   font-size: 100%;
   color: white;
+  cursor: pointer;
   background: none;
 }
 
@@ -671,6 +672,7 @@ margin-left: 11vw;
   padding: 10px 20px;
   text-align: center;
   font-size: 14.08px;
+  cursor: pointer;
 }
 
 .Unhighlighted_Shipping_Button{
@@ -680,6 +682,7 @@ margin-left: 11vw;
   padding: 10px 20px;
   text-align: center;
   font-size: 14.08px;
+  cursor: pointer;
 }
 
 .Highlighted_Shipping_Button{
@@ -941,6 +944,10 @@ height: 100%;
   display: flex;
 }
 
+.Trash_Container > button {
+  cursor: pointer;
+}
+
 .Slider_Grid {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -1003,6 +1010,9 @@ height: 100%;
 .Title_Section_Cont {
   display: block;
   width: 50%;
+}
+.Header_Space {
+  width: 144.5px;
 }
 @media only screen and (max-width: 1050px) {
   .Seller_Container {
@@ -1118,7 +1128,8 @@ height: 100%;
   width: 788.67px;
 }
 .Watch_Title_Text {
-  width: 1000px;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 .Auction_Input {
   width: 90px;
@@ -1126,7 +1137,21 @@ height: 100%;
 .Purchase_Container {
   margin: 11.5px 55px 0 55px;
 }
- 
+
+}
+@media only screen and (max-width: 717px) {
+
+.Header_Space {
+  width: 10px;
+}
+.Header_Search {
+  min-width: 10rem;
+  width: 12rem;
+}
+.Sub_Info_Title {
+  min-width: 250px;
+    width: 220px;
+}
 }
 @media only screen and (max-width: 900px) {
   .Sub_Info_Cont {
@@ -1153,8 +1178,6 @@ height: 100%;
   min-width: 44.79px;
  }
  .App_Header {
-  min-width: 742px;
-  width: 742px;
   margin: 24.5px 70px;
  }
  .Watch_Container{
@@ -1183,7 +1206,7 @@ height: 100%;
     margin: 28.9px 77px;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
   .Seller_Container {
     display: none;
   }
@@ -1207,6 +1230,33 @@ height: 100%;
     margin: 0px;
   }
   }
+
+  @media only screen and (max-width: 870px) and (min-width: 760px) {
+.Buy_Container {
+  flex-direction: column;
+  width: 220px;
+}
+.Price_Right_Container {
+  position: absolute;
+  margin-left: 3.5rem;
+  margin-top: 7.3rem;
+  height: unset;
+  padding: unset;
+}
+
+.Icon_Set_Cont {
+  flex-direction: column;
+    margin-left: 2rem;
+}
+  }
+
+.Icon_Set_Cont {
+  display: flex;
+}
+
+.Icon_Split {
+  display: flex;
+}
 
 .current-page {
   font-size: 24px;

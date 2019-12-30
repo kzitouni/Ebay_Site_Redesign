@@ -30,7 +30,8 @@ const ProductIcons = item => {
   ];
   let today = months[date.getMonth()];
   return (
-    <div style={{ display: "flex" }}>
+    <div className="Icon_Set_Cont">
+      <div className="Icon_Split">
       <div className="Icon_Cont">
         <div className="Circle_Under_Buy">
           <div>
@@ -59,6 +60,8 @@ const ProductIcons = item => {
           {itemspec != "" ? itemspec.Item.HandlingTime : null} Day Handling
         </p>
       </div>
+      </div>
+<div className="Icon_Split">
       <div className="Icon_Cont">
         <div className="Circle_Under_Buy">
           <div>
@@ -79,6 +82,7 @@ const ProductIcons = item => {
         <p className="Shipping_Text">Ebay Money Back</p>
         <p className="Shipping_Text_Under">60 Day Guarantee</p>
       </div>
+</div>
     </div>
   );
 };
