@@ -7,8 +7,9 @@ const Result = () => {
   const Elements = product.map(item =>
     item.paginationOutput[0].totalEntries[0] != "0" ? (
       <div>
-        {item.searchResult[0].item.map(t => (
+        {item.searchResult[0].item.map((t, i) => (
           <SearchResult
+          key={i}
             index={t.itemId}
             item={t.galleryURL}
             title={t.title}

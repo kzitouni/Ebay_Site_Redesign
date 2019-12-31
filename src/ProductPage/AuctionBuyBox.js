@@ -38,7 +38,7 @@ const AuctionBuyBox = (item) => {
 
 		const [watchingItems, setWatchingItems] = useState()
 		let ind = watchlist
-		.map(item => {
+		.map((item) => {
 		  return item.itemid;
 		})
 	let indy = ind.indexOf(itemspec.Item.ItemID)

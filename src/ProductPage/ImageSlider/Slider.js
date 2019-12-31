@@ -34,8 +34,8 @@ const Slider = () => {
       <div className="Slider_Grid">
         {itemspec != ""
           ? itemspec.Item.PictureURL.map((image, i) => (
-              <button className="Image_Button">
-                <ImageLine image={image} key={i} />
+              <button className="Image_Button" key={i}>
+                <ImageLine image={image} />
               </button>
             ))
           : null}

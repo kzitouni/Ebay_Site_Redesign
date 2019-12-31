@@ -21,10 +21,10 @@ const Searchbar = () => {
       setBorder({});
     }
   };
-  const newarr = CategoriesData.GetCategoryInfoResponse.map(item => {
+  const newarr = CategoriesData.GetCategoryInfoResponse.map((item, i) => {
     return (
       <option
-        value={item.CategoryID == "" ? "" : `&categoryId=${item.CategoryID}`}
+       key={i} value={item.CategoryID == "" ? "" : `&categoryId=${item.CategoryID}`}
       >
         {item.CategoryNamePath}
       </option>

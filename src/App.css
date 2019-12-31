@@ -993,7 +993,7 @@ height: 100%;
   height: 51.2px;
   display: grid;
   margin-left: 3vw;
-  margin-top: 3.468px;
+  margin-top: 9px;
   grid-template-rows: repeat(2, 1fr);
 }
 

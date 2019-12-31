@@ -89,7 +89,7 @@ const AuctionBox = item => {
   };
 
   let ind = watchlist
-  .map(item => {
+  .map((item) => {
     return item.itemid;
   })
 let indy = ind.indexOf(itemspec.Item.ItemID)

@@ -12,8 +12,9 @@ const ItemSpecifics = () => {
             ? null
             : itemspec.Item.ItemSpecifics.NameValueList == undefined
             ? null
-            : itemspec.Item.ItemSpecifics.NameValueList.map(item => (
+            : itemspec.Item.ItemSpecifics.NameValueList.map((item, i) => (
                 <p
+                  key={i}
                   style={{ gridArea: "inherit" }}
                   className="Right_Spec_Cont_Text"
                 >

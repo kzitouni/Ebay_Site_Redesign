@@ -72,7 +72,7 @@ const BuyBox = item => {
     watchlist.some(item => item.itemid == itemspec.Item.ItemID);
 
   let ind = watchlist
-    .map(item => {
+    .map((item) => {
       return item.itemid;
     })
 let indy = ind.indexOf(itemspec.Item.ItemID)
