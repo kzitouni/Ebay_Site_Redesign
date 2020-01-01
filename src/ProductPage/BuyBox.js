@@ -76,7 +76,6 @@ const BuyBox = item => {
       return item.itemid;
     })
 let indy = ind.indexOf(itemspec.Item.ItemID)
-    // indexOf(watchlist);
   const pushtoWatch = () =>{
       console.log(watchlist)
     found() == false

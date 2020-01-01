@@ -70,6 +70,10 @@ input::-webkit-inner-spin-button {
   margin-top: 1rem;
 }
 
+.Ebay_Logo {
+  height: 3.5rem;
+}
+
 .Timer_Style {
   text-align: left;
   font-size: 10px;

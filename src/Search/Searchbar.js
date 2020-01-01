@@ -38,8 +38,8 @@ const Searchbar = () => {
     <header className="Header">
       <Link to="/">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/EBay_logo.png/128px-EBay_logo.png"
-          style={{}}
+          src="https://1000logos.net/wp-content/uploads/2018/08/eBay-Logo.png"
+          className="Ebay_Logo"
         />
       </Link>
       <div className="Header_Space"></div>

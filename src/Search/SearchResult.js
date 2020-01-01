@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../Context";
 const SearchResult = item => {
-  const { itemFetch, setItemspec } = useContext(Context);
+  const { itemFetch, setItemspec, setItemid } = useContext(Context);
   let endingTime = item.endtime.toString();
   let endingTime1 = endingTime.substring(
     endingTime.lastIndexOf("P") + 1,
@@ -32,7 +32,9 @@ const SearchResult = item => {
           <Link to={`/product${item.itemId}`}>
             {" "}
             <p
-              onClick={() => itemFetch(item.itemId)}
+              onClick={() => {
+                itemFetch(item.itemId) 
+              }}
               className="Sub_Info_Title"
             >
               {item.title}
