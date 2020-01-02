@@ -2,9 +2,11 @@
   "name": "apitest",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kzitouni.github.io/Ebay_Site_Redesign",
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.4.1",
+    "gh-pages": "^2.1.1",
     "npm": "^6.13.4",
     "react": "^16.12.0",
     "react-bootstrap-sweetalert": "^5.1.8",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
