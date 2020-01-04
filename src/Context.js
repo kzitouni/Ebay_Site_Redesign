@@ -14,7 +14,7 @@ function ContextProvider({ children }) {
   const SearchItems = async () => {
     try {
       let Data = await axios.get(
-        `https://7ohlgtw9j3.execute-api.us-east-1.amazonaws.com/EbaySearch?search=${search}${category}`
+        `https://7ohlgtw9j3.execute-api.us-east-1.amazonaws.com/EbaySearch?search=${search}&category=${category}`
       );
       console.log(category, search);
       return Data;
