@@ -34,6 +34,24 @@ input::-webkit-inner-spin-button {
 .App {
   text-align: center;
 }
+.App ::-webkit-scrollbar-track
+{
+
+}
+/* 
+::-webkit-scrollbar{
+  width: 12px;
+  margin-right: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,.5);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0,0,0,.7);
+} */
 
 .App-logo {
   height: 40vmin;

@@ -14,7 +14,7 @@ function ContextProvider({ children }) {
   const SearchItems = async () => {
     try {
       let Data = await axios.get(
-        `/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=KarimZit-TestKey-PRD-83882c164-20d40dd0&RESPONSE-DATA-FORMAT=JSON${category}&REST-PAYLOAD&keywords=${search}&itemFilter.name=MaxPrice&itemFilter.value=1000.00&itemFilter.paramName=Currency&itemFilter.paramValue=USD&outputSelector(0)=SellerInfo&outputSelector(1)=CategoryHistogram&descriptionSearch=true&paginationInput.entriesPerPage=55`
+        `http://52.87.152.58/EbaySearch/?category=${category}&search=${search}`
       );
       console.log(category, search);
       return Data;
@@ -36,7 +36,7 @@ function ContextProvider({ children }) {
     console.log(watchlist);
     await axios
       .get(
-        `/shopping?callname=GetSingleItem&responseencoding=JSON&appid=KarimZit-TestKey-PRD-83882c164-20d40dd0&siteid=0&version=967&ItemID=${item}&IncludeSelector=Description,ItemSpecifics,ShippingCosts,Details,Variations`
+        `http://52.87.152.58/EbayItem/?item=${item}`
       )
       .then(data => setItemspec(data.data));
   };
