@@ -14,7 +14,7 @@ function ContextProvider({ children }) {
   const SearchItems = async () => {
     try {
       let Data = await axios.get(
-        `https://7ohlgtw9j3.execute-api.us-east-1.amazonaws.com/EbaySearch?category=${category}&search=${search}`
+        `https://7ohlgtw9j3.execute-api.us-east-1.amazonaws.com/EbaySearch?${category}&search=${search}`
       );
       console.log(category, search);
       return Data;
@@ -47,25 +47,26 @@ function ContextProvider({ children }) {
     console.log(cat + "Category");
   }
 
-  function onClick(item) {
-    setCategory(item);
+  // function onClick(item) {
+  //   setCategory(item);
 
-    console.log(category);
-  }
+  //   console.log(category);
+  // }
   return (
     <Context.Provider
       value={{
         product,
         onSubmit,
         category,
-        onClick,
+        // onClick,
         itemFetch,
         itemspec,
         watchlist,
         setWatchlist,
         setItemspec,
         setItemid,
-        itemid
+        itemid,
+        setCategory
       }}
     >
       {children}
