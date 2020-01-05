@@ -17,7 +17,7 @@ const AuctionBox = item => {
   const [watchingItems, setWatchingItems] = useState();
   const [bid, setBid] = useState();
   const [price, setPrice] = useState(
-    itemspec != ""
+    itemspec != "x"
       ? itemspec.Item.ConvertedCurrentPrice.Value.toString().indexOf(".") != -1
         ? itemspec.Item.ConvertedCurrentPrice.Value.toString().split(".")[1]
             .length < 2
@@ -26,21 +26,21 @@ const AuctionBox = item => {
         : itemspec.Item.ConvertedCurrentPrice.Value.toString().concat(".00")
       : null
   );
-  const box = (itemspec != "" &&
+  const box = (itemspec != "x" &&
   itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") !=
     -1 ? (
     <p>
       {" "}
       <FiPackage style={{ marginRight: "12.8px" }} />
-      {itemspec != "" ? itemspec.Item.ConditionDisplayName : null}
+      {itemspec != "x" ? itemspec.Item.ConditionDisplayName : null}
     </p>
-  ) : itemspec != "" &&
+  ) : itemspec != "x" &&
     itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") ==
       -1 ? (
     <p>
       {" "}
       <GiCardboardBox style={{ marginRight: "12.8px" }} />
-      {itemspec != "" ? itemspec.Item.ConditionDisplayName : null}
+      {itemspec != "x" ? itemspec.Item.ConditionDisplayName : null}
     </p>
   ) : null)
   const [border, setBorder] = useState("red red #a3cb47 red");
@@ -151,7 +151,7 @@ let indy = ind.indexOf(itemspec.Item.ItemID)
               </div>
             </button>
             <p className="Bids_Text">
-              {itemspec != "" ? itemspec.Item.BidCount : null} bids
+              {itemspec != "x" ? itemspec.Item.BidCount : null} bids
             </p>
             <button className="Bid_Button" onClick={() => handleBid()}>
               Place Bid

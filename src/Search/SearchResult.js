@@ -17,10 +17,8 @@ const SearchResult = item => {
     endingTime.lastIndexOf("M")
   );
   useEffect(() => {
-    setItemspec("");
+    setItemspec("x");
   });
-  console.log(endingTime1);
-  console.log(item.buyitnow, "ayyy");
   return (
     <div style={{ marginBottom: "25px" }}>
       <div className="Image_Cont">

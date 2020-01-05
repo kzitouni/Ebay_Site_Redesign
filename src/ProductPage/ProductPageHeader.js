@@ -1,20 +1,22 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../Context";
-import {
-  IoIosTimer,
-  IoIosStar
-} from "react-icons/io";
+import { IoIosTimer, IoIosStar } from "react-icons/io";
 import BuyBox from "./BuyBox";
 import AuctionBox from "./AuctionBox";
 import AuctionBuyBox from "./AuctionBuyBox";
 import Description from "./Description";
 import ReactLoading from "react-loading";
+import { SampleData } from "../SampleData";
 
 const ProductPage = item => {
-  const { product, itemspec } = useContext(Context);
-  const [load, setLoad] = useState(<div style={{ display: "grid", justifyContent: "center", marginTop: "90px" }}>
-                                        <ReactLoading type={"bars"} color={"#a3cb47"} />
-                                   </div>)
+  const { product, itemspec, setItemspec } = useContext(Context);
+  const [load, setLoad] = useState(
+    <div
+      style={{ display: "grid", justifyContent: "center", marginTop: "90px" }}
+    >
+      <ReactLoading type={"bars"} color={"#a3cb47"} />
+    </div>
+  );
   const date = new Date();
   var months = [
     "Jan",
@@ -30,24 +32,39 @@ const ProductPage = item => {
     "Nov",
     "Dec"
   ];
-  console.log(product);
   useEffect(() => {
     setLoad(
-        <div style={{ display: "grid", justifyContent: "center", marginTop: "90px" }}>
+      <div
+        style={{ display: "grid", justifyContent: "center", marginTop: "90px" }}
+      >
         <ReactLoading type={"bars"} color={"#a3cb47"} />
-   </div>
+      </div>
     );
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoad(
-        <div style={{ display: "grid", justifyContent: "center", marginTop: "90px" }}>
-       <h1 style={{color:"#a3cb47"}} >Dang we could not get the results for that search. Please go back and try again</h1>
-   </div>
+        <div
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            marginTop: "90px"
+          }}
+        >
+          <h1 style={{ color: "#a3cb47" }}>
+            Dang we could not get the results for that search. Please go back
+            and try again
+          </h1>
+        </div>
       );
-    }, [8000]);
+      if (itemspec.Ack == "Failure" || itemspec == "x") {
+        setItemspec(SampleData);
+      }
+    }, [6000]);
+    return () => clearTimeout(timer);
   }, [itemspec]);
-  let endingTime = itemspec != "" ? itemspec.Item.TimeLeft.toString() : null;
+
+  let endingTime = itemspec != "x" ? itemspec.Item.TimeLeft.toString() : null;
   let endingTime1 =
-    itemspec != ""
+    itemspec != "x"
       ? endingTime.lastIndexOf("D") == -1
         ? "0"
         : endingTime.substring(
@@ -56,7 +73,7 @@ const ProductPage = item => {
           )
       : null;
   let endingTime2 =
-    itemspec != ""
+    itemspec != "x"
       ? endingTime.lastIndexOf("H") == -1
         ? "0"
         : endingTime.substring(
@@ -65,7 +82,7 @@ const ProductPage = item => {
           )
       : null;
   let endingTime3 =
-    itemspec != ""
+    itemspec != "x"
       ? endingTime.lastIndexOf("H") == -1
         ? endingTime.substring(
             endingTime.lastIndexOf("T") + 1,
@@ -79,8 +96,8 @@ const ProductPage = item => {
           )
       : null;
 
-  return itemspec == "" ? (
-load
+  return itemspec == "x" ? (
+    load
   ) : (
     <div>
       <hr className="ProductPage_HR" />
@@ -89,7 +106,7 @@ load
           <div className="Title_Container">
             <h1 className="ProductPageTitle">
               {" "}
-              {itemspec != "" ? itemspec.Item.Title : null}
+              {itemspec != "x" ? itemspec.Item.Title : null}
             </h1>
           </div>
           <div className="Icon_Container">
@@ -104,7 +121,7 @@ load
           className="Seller_Container"
           style={{
             marginLeft:
-              itemspec != ""
+              itemspec != "x"
                 ? itemspec.Item.PictureURL == undefined
                   ? null
                   : itemspec.Item.PictureURL.length > 1
@@ -115,9 +132,9 @@ load
         >
           <div style={{ display: "flex" }}>
             <p className="Seller_Text">
-              {itemspec != "" ? itemspec.Item.Seller.UserID : null}{" "}
+              {itemspec != "x" ? itemspec.Item.Seller.UserID : null}{" "}
             </p>
-            {itemspec != "" ? (
+            {itemspec != "x" ? (
               itemspec.Item.Seller.TopRatedSeller ? (
                 <div style={{ marginLeft: "10.24px" }}>
                   <IoIosStar className="Star_Icon"></IoIosStar>
@@ -132,7 +149,7 @@ load
                 className="Rating_Bar_div"
                 style={{
                   width:
-                    itemspec != ""
+                    itemspec != "x"
                       ? itemspec.Item.Seller.PositiveFeedbackPercent + "%"
                       : null
                 }}
@@ -140,7 +157,7 @@ load
             </div>
             <p className="Rating_Text">
               {" "}
-              {itemspec != ""
+              {itemspec != "x"
                 ? itemspec.Item.Seller.PositiveFeedbackPercent
                 : null}
               %
@@ -148,7 +165,7 @@ load
           </div>
         </div>
       </div>
-      {itemspec != "" ? (
+      {itemspec != "x" ? (
         itemspec.Item.ListingType == "FixedPriceItem" ? (
           <BuyBox />
         ) : itemspec.Item.ListingType == "Chinese" &&

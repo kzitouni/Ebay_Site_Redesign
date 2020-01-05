@@ -11,12 +11,12 @@ const AuctionBuyBox = (item) => {
 
 	const { itemspec, watchlist } = useContext(Context)
 	const [bid, setBid] = useState()
-    const [price, setPrice] = useState((itemspec != "") ?  ((itemspec.Item.ConvertedCurrentPrice.Value).toString().indexOf(".") != -1 ? ((itemspec.Item.ConvertedCurrentPrice.Value).toString().split(".")[1].length < 2 ? (itemspec.Item.ConvertedCurrentPrice.Value.toString().concat("0")) : itemspec.Item.ConvertedCurrentPrice.Value ) : (itemspec.Item.ConvertedCurrentPrice.Value.toString().concat(".00")) ): null)
-	const binprice = ((itemspec != "") ? ((itemspec.Item.ConvertedBuyItNowPrice == undefined) ? "N/A" :itemspec.Item.ConvertedBuyItNowPrice.Value.toString().indexOf(".") != -1 ? ((itemspec.Item.ConvertedBuyItNowPrice.Value).toString().split(".")[1].length < 2 ? (itemspec.Item.ConvertedBuyItNowPrice.Value.toString().concat("0")) : itemspec.Item.ConvertedBuyItNowPrice.Value ) :  (itemspec.Item.ConvertedBuyItNowPrice.Value.toString().concat(".00"))): null)
+    const [price, setPrice] = useState((itemspec != "x") ?  ((itemspec.Item.ConvertedCurrentPrice.Value).toString().indexOf(".") != -1 ? ((itemspec.Item.ConvertedCurrentPrice.Value).toString().split(".")[1].length < 2 ? (itemspec.Item.ConvertedCurrentPrice.Value.toString().concat("0")) : itemspec.Item.ConvertedCurrentPrice.Value ) : (itemspec.Item.ConvertedCurrentPrice.Value.toString().concat(".00")) ): null)
+	const binprice = ((itemspec != "x") ? ((itemspec.Item.ConvertedBuyItNowPrice == undefined) ? "N/A" :itemspec.Item.ConvertedBuyItNowPrice.Value.toString().indexOf(".") != -1 ? ((itemspec.Item.ConvertedBuyItNowPrice.Value).toString().split(".")[1].length < 2 ? (itemspec.Item.ConvertedBuyItNowPrice.Value.toString().concat("0")) : itemspec.Item.ConvertedBuyItNowPrice.Value ) :  (itemspec.Item.ConvertedBuyItNowPrice.Value.toString().concat(".00"))): null)
 	const [border, setBorder] = useState("red red #a3cb47 red")
 	const [borderwidth, setBorderwidth] = useState("0px 0px 1px 0px")
-	const box = ((itemspec != "" && (itemspec.Item.ConditionDisplayName != undefined)) ? ((itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) )  ? <p>  <FiPackage style={{marginRight:'1vw'}} />{(itemspec != "") ? itemspec.Item.ConditionDisplayName : null}</p>
-	: (itemspec != "" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") == -1) ) ? <p>  <GiCardboardBox style={{marginRight:'1vw'}} />{(itemspec != "") ? itemspec.Item.ConditionDisplayName : null}</p> : null) : null)
+	const box = ((itemspec != "x" && (itemspec.Item.ConditionDisplayName != undefined)) ? ((itemspec != "x" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") != -1) )  ? <p>  <FiPackage style={{marginRight:'1vw'}} />{(itemspec != "x") ? itemspec.Item.ConditionDisplayName : null}</p>
+	: (itemspec != "x" && (itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") == -1) ) ? <p>  <GiCardboardBox style={{marginRight:'1vw'}} />{(itemspec != "x") ? itemspec.Item.ConditionDisplayName : null}</p> : null) : null)
 	const pushitems = {
 		title: itemspec.Item.Title, 
 		itemid: itemspec.Item.ItemID, 
@@ -27,7 +27,7 @@ const AuctionBuyBox = (item) => {
 		condition: itemspec.Item.ConditionDisplayName
 	}
 	const quantity = (
-		itemspec != ""
+		itemspec != "x"
 		  ? itemspec.Item.Quantity == undefined
 			? null
 			: itemspec.Item.Quantity
@@ -52,7 +52,6 @@ const AuctionBuyBox = (item) => {
 			}, [])
 const handleInput = (event) => {
     setBid(event.target.value)
-    console.log(bid)
 }
 let  outline = {
     borderColor: border,
@@ -131,7 +130,7 @@ return (
     </h1>
 				</div>
                 </button>
-                <p className="Bids_Text" style={{marginTop:'92.48px'}}>{(itemspec != "") ?  (itemspec.Item.BidCount) : null} bids</p>
+                <p className="Bids_Text" style={{marginTop:'92.48px'}}>{(itemspec != "x") ?  (itemspec.Item.BidCount) : null} bids</p>
         <button className="Bid_Button" onClick={() => handleBid()} style={{}} >Place Bid
                 </button>
 			</div>

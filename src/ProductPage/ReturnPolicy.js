@@ -8,13 +8,13 @@ const ReturnPolicy = () => {
       <h1 className="Desc_Titles">Return Policy</h1>
 
       <div style={{ display: "block" }} className="Spec_Box">
-        {itemspec != "" ? (
+        {itemspec != "x" ? (
           itemspec.Item.ReturnPolicy.ReturnsAccepted == "Returns Accepted" ? (
             <div>
               <div className="Shipping_Bar">
                 <div className="Return_Bar_Text_Cont">
                   <p className="Return_Bar_Title">
-                    After receiving the item, contact seller within
+                    Contact seller within
                   </p>
                 </div>
                 <div className="Return_Bar_Text_Cont">
@@ -27,7 +27,7 @@ const ReturnPolicy = () => {
               <div className="Shipping_Bar_Answer">
                 <div className="Return_Bar_Text_Cont">
                   <p className="Return_Bar_Text">
-                    {itemspec != ""
+                    {itemspec != "x"
                       ? itemspec.Item.ReturnPolicy.ReturnsWithin
                       : null}
                   </p>
@@ -37,7 +37,7 @@ const ReturnPolicy = () => {
                 </div>
                 <div className="Return_Bar_Text_Cont">
                   <p className="Return_Bar_Text">
-                    Buyer pays for return shipping
+                    Buyer pays
                   </p>
                 </div>
               </div>{" "}

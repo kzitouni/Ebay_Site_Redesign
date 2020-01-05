@@ -14,7 +14,7 @@ const BuyBox = item => {
     Context
   );
   const [watchingItems, setWatchingItems] = useState();
-  const box = (itemspec != "" && itemspec.Item.ConditionDisplayName != undefined ? (
+  const box = (itemspec != "x" && itemspec.Item.ConditionDisplayName != undefined ? (
     itemspec.Item.ConditionDisplayName.toLowerCase().indexOf("new") !=
     -1 ? (
       <p>
@@ -31,7 +31,7 @@ const BuyBox = item => {
     )
   ) : null)
   const price = (
-    itemspec != ""
+    itemspec != "x"
       ? itemspec.Item.ConvertedCurrentPrice.Value.toString().indexOf(".") != -1
         ? itemspec.Item.ConvertedCurrentPrice.Value.toString().split(".")[1]
             .length < 2
@@ -41,7 +41,7 @@ const BuyBox = item => {
       : null
   );
   const quantity = (
-    itemspec != ""
+    itemspec != "x"
       ? itemspec.Item.Quantity == undefined
         ? null
         : itemspec.Item.Quantity
@@ -77,7 +77,6 @@ const BuyBox = item => {
     })
 let indy = ind.indexOf(itemspec.Item.ItemID)
   const pushtoWatch = () =>{
-      console.log(watchlist)
     found() == false
       ? watchlist.push(pushitems) && setWatchingItems(found())
       : watchlist.splice(indy, 1) && setWatchingItems(found());

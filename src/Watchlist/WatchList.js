@@ -78,7 +78,7 @@ const WatchList = item => {
                         ? "Buy It Now + Auction"
                         : item.listingtype == "FixedPrice" || "StoreInventory"
                         ? "Buy It Now"
-                        : console.log(item.listingtype)}
+                        : null}
                     </p>
                   </div>
 

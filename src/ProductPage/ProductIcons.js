@@ -39,7 +39,7 @@ const ProductIcons = item => {
           </div>
         </div>
         <p className="Shipping_Text">
-          {itemspec != ""
+          {itemspec != "x"
             ? itemspec.Item.ShippingCostSummary.ShippingType
             : null}{" "}
           Service
@@ -54,10 +54,10 @@ const ProductIcons = item => {
         </div>
         <p className="Shipping_Text">
           Item Ships ({today}{" "}
-          {itemspec != "" ? date.getDate() + itemspec.Item.HandlingTime : null})
+          {itemspec != "x" ? date.getDate() + itemspec.Item.HandlingTime : null})
         </p>
         <p className="Shipping_Text_Under">
-          {itemspec != "" ? itemspec.Item.HandlingTime : null} Day Handling
+          {itemspec != "x" ? itemspec.Item.HandlingTime : null} Day Handling
         </p>
       </div>
       </div>
@@ -69,7 +69,7 @@ const ProductIcons = item => {
           </div>
         </div>
         <p className="Shipping_Text">
-          {itemspec != "" ? itemspec.Item.Location : null}
+          {itemspec != "x" ? itemspec.Item.Location : null}
         </p>
         <p className="Shipping_Text_Under">Item Location</p>
       </div>

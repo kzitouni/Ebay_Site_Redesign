@@ -21,7 +21,7 @@ const Slider = () => {
           showStatus={false}
           centerMode={true}
         >
-          {itemspec != ""
+          {itemspec != "x"
             ? itemspec.Item.PictureURL.map(item => (
                 <div
                   className="ProductPage_Image_Container"
@@ -32,7 +32,7 @@ const Slider = () => {
         </Carousel>
       )}
       <div className="Slider_Grid">
-        {itemspec != ""
+        {itemspec != "x"
           ? itemspec.Item.PictureURL.map((image, i) => (
               <button className="Image_Button" key={i}>
                 <ImageLine image={image} />

@@ -38,20 +38,6 @@ input::-webkit-inner-spin-button {
 {
 
 }
-/* 
-::-webkit-scrollbar{
-  width: 12px;
-  margin-right: 10px;
-}
-::-webkit-scrollbar-thumb {
-	background-color: rgba(0,0,0,.3);
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0,0,0,.5);
-}
-::-webkit-scrollbar-thumb:active {
-  background-color: rgba(0,0,0,.7);
-} */
 
 .App-logo {
   height: 40vmin;
@@ -585,7 +571,7 @@ margin-left: 11vw;
 }
 
 .Categories_Left {
-  width: 20vw;
+  width: 20%;
   height: 100%;
 }
 
@@ -799,7 +785,6 @@ margin: auto;
 
 .Shipping_Bar {
   width: 100%;
-  height: 4vh;
   background-color: #f0f0f0;
   display: flex;
   min-height: 23px
@@ -860,7 +845,6 @@ margin: auto;
 
 .Shipping_Bar_Answer {
   width: 100%;
-  height: 23.12px;
   display: flex;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -993,14 +977,24 @@ height: 100%;
 
 .WatchList_Header {
   font-size: 7.68px;
-  margin-left: .6vw;
+  display: flex;
+  justify-content: center;
   color: #a3cb47;
 }
 
 .Watch_Eye {
-  margin-left: 1.1vw;
     margin-top: .7vw;
-    color: #a3cb47
+    color: #a3cb47;
+    justify-content: center; 
+    width: 100%;
+}
+
+.Search_Res_Cont {
+  width:80%
+}
+
+.No_Search_Text {
+  color: #a3cb47;
 }
 
 .Icon_Cont {
@@ -1044,9 +1038,6 @@ height: 100%;
 
 
 @media only screen and (max-width: 1000px) {
- .Title_Container {
-   margin-left: 110px;
- }
  .Shipping_Text_Under {
    margin-left: 35px;
  }
@@ -1059,6 +1050,9 @@ height: 100%;
  }
  .Categories_Left {
    display: none;
+ }
+ .Search_Res_Cont {
+   width: 100%;
  }
  .Category_Select {
    display: none;
@@ -1075,7 +1069,6 @@ height: 100%;
 }
 
 .Eye {
-  margin-left: 110px;
   margin-right: 4px;
 }
 .Time {
@@ -1143,12 +1136,6 @@ height: 100%;
   width: 100px;
   margin-left: 10px;
 }
-.Item_Ship_Container1 {
-  width: 788.67px;
-}
-.Payment_Cont {
-  width: 788.67px;
-}
 .Watch_Title_Text {
   width: 100%;
   margin-bottom: 2rem;
@@ -1207,7 +1194,6 @@ height: 100%;
  }
  .Watch_Eye {
   margin-top: 6.3px;
-  margin-left: 9.9px;
  }
 .Purchase_Left_Auction_Container {
   width: 20px;
@@ -1217,16 +1203,14 @@ height: 100%;
 @media only screen and (max-width: 800px) {
   .Item_Spec_Container1 {
     margin: auto 77px;
-    min-width: 628.67px;
   }
   .Right_Spec_Cont_Text {
     padding: 5.68px 40px;
-    min-width: 230px;
   }
   .About_Cont {
-    min-width: 628.67px;
     margin: 28.9px 77px;
   }
+
 }
 @media only screen and (max-width: 760px) {
   .Seller_Container {
@@ -1251,9 +1235,27 @@ height: 100%;
   .Title_Left_Cont {
     margin: 0px;
   }
+  .Buy_Container{
+    margin: unset;
+  }
+  .Circle_Under_Buy{
+    margin-left: unset;
+  }
+  .Shipping_Text{
+    margin-left: unset;
+  }
+  .Shipping_Text_Under {
+    margin-left: unset;
+  }
+  .ProductPage_Image_Container {
+    margin-left: 2rem;
+  }
+  .ProductPage_ImageSet_Container1{
+    margin-left: unset;
+  }
   }
 
-  @media only screen and (max-width: 870px) and (min-width: 760px) {
+  @media only screen and (max-width: 900px) and (min-width: 761px) {
 .Buy_Container {
   flex-direction: column;
   width: 220px;
@@ -1328,4 +1330,111 @@ ul.pagination a.page-link {
 }
 ul.pagination a.page-link:hover {
   background-color: #f4f4f4;
+}
+
+@media only screen and (max-width: 499px) {
+  .App_Header {
+    margin: unset;
+    margin-left: 1rem;
+  }
+  .Header_Search{
+    height: 25px;
+  }
+  .InputBar {
+    height: 24px;
+  }
+  .Search_Container {
+    height: 29px;
+    width: 28px;
+    min-width: unset;
+  }
+  .Search_Icon {
+    width: 20px;
+    margin-top: unset;
+  }
+  .Watch_Container{
+    margin-left: 37px;
+  }
+  .Watch_Eye{
+    margin-left: unset;
+    justify-content: center; 
+    width: 100%;
+  }
+  .WatchList_Header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .ProductPageTitle{
+    min-width: unset;
+  }
+  .Slider_Grid{
+    grid-template-columns: max-content max-content max-content;
+  }
+  .carousel.carousel-slider{
+    width: 350px !important;
+  }
+  .Icon_Cont{
+    width: 80px;
+  }
+  .Icon_Set_Cont{
+    justify-content: center;
+  }
+  .Description_Cont_Cont{
+    width: unset;
+  }
+  .Item_Spec_Container1 {
+    min-width: unset;
+  }
+  .Spec_Box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .About_Cont {
+    min-width: unset;
+  }
+  .Buy_Container{
+    margin: auto;
+    width: 80%;
+  }
+  .Product_Info{
+ margin: auto;
+ margin-left: unset;
+ margin-top: 5px;
+ margin-right: unset;
+ width: unset;
+  }
+  .Item_Spec_Container1{
+    margin: auto;
+  }
+  .About_Cont{
+    margin: auto;
+    margin-top: 10px;
+  }
+  .Shipping_Bar_Text {
+    font-size: 10px;
+  }
+  .Return_Bar_Text {
+    font-size: 10px;
+  }
+  .Ebay_Logo {
+    height: 2.5rem;
+    margin-top: 10px;
+  }
+  .ProductPage_Image_Container {
+    margin-left: unset;
+    width: 100%;
+  }
+  .Trash_Container {
+    margin-left: 10px;
+  }
+  .SearchImages{
+    width: 130px;
+  }
+  .Sub_Info_Title{
+    min-width: unset;
+    width: unset;
+  }
+  .Ends_Container{
+    margin-left: unset;
+  }
 }

@@ -32,7 +32,7 @@ const Shipping = () => {
           <div className="Shipping_Bar_Answer">
             <div className="Shipping_Bar_Text_Cont">
               <p className="Shipping_Bar_Text" style={{ width: "100%" }}>
-                {itemspec != ""
+                {itemspec != "x"
                   ? itemspec.Item.ShippingCostSummary.ShippingType ==
                     "Calculated"
                     ? "Calculated at Checkout"
@@ -47,7 +47,7 @@ const Shipping = () => {
             </div>
             <div className="Shipping_Bar_Text_Cont">
               <p className="Shipping_Bar_Text">
-                {itemspec != ""
+                {itemspec != "x"
                   ? itemspec.Item.ShippingCostSummary.ShippingType ==
                     "Calculated"
                     ? "Did not Specify"
@@ -56,7 +56,7 @@ const Shipping = () => {
               </p>
             </div>
             <div className="Shipping_Bar_Text_Cont">
-              <p className="Shipping_Bar_Text">Tax may apply at checkout</p>
+              <p className="Shipping_Bar_Text">Taxes may apply</p>
             </div>
           </div>
         </div>

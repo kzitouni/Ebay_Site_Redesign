@@ -24,7 +24,7 @@ const Searchbar = () => {
   const newarr = CategoriesData.GetCategoryInfoResponse.map((item, i) => {
     return (
       <option
-       key={i} value={item.CategoryID == "" ? "" : `&categoryId=${item.CategoryID}`}
+       key={i} value={item.CategoryID == "" ? "" : item.CategoryID}
       >
         {item.CategoryNamePath}
       </option>
@@ -32,7 +32,6 @@ const Searchbar = () => {
   });
   const handleChange = e => {
     setCategory(e.target.value);
-    console.log(category);
   };
   return (
     <header className="Header">

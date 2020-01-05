@@ -27,7 +27,7 @@ const ItemSpecifics = () => {
       <div className="About_Cont">
         <h1 className="About_Title">About This Product</h1>
         <div className="About_Section">
-          <p>{itemspec != "" ? Render(itemspec.Item.Description) : null}</p>
+          <p>{itemspec != "x" ? Render(itemspec.Item.Description) : null}</p>
         </div>
       </div>
     </div>

@@ -1,10 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import SearchResult from "./SearchResult";
 import { Context } from "../Context";
+import ReactLoading from "react-loading";
 
 const Result = () => {
-  const { product } = useContext(Context);
-  const Elements = product.map(item =>
+  const { product, load } = useContext(Context);
+  let Elements;
+   Elements = product.map(item =>
     item.paginationOutput[0].totalEntries[0] != "0" ? (
       <div>
         {item.searchResult[0].item.map((t, i) => (
@@ -34,11 +36,15 @@ const Result = () => {
         ))}
       </div>
     ) : (
-      <h1>No matches found for that search</h1>
+      <h1 className="No_Search_Text">No matches were found for that search</h1>
     )
   );
 
-  return <div>{product != "" ? Elements : null}</div>;
+
+
+    return <div className="Search_Res_Cont" >{load}
+    {product != [] ? Elements : null}
+    </div>;
 };
 
 export default Result;
