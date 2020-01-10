@@ -74,7 +74,6 @@ const AuctionBox = item => {
   };
   const handleInput = event => {
     setBid(event.target.value);
-    console.log(bid);
   };
 
   const handleBid = () => {

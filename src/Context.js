@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactLoading from "react-loading";
+import DefaultSearch from './DefaultSearch'
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState([DefaultSearch]);
   const [load, setLoad] = useState();
   const [search, setSearch] = useState("sly cooper");
   const [category, setCategory] = useState("");
@@ -12,7 +13,7 @@ function ContextProvider({ children }) {
   const [itemid, setItemid] = useState("123434343");
   const [watchlist, setWatchlist] = useState([]);
 
-  const SearchItems = async () => {
+  const SearchItems = async (item, cat) => {
     try {
       setLoad(
         <div
@@ -26,7 +27,7 @@ function ContextProvider({ children }) {
         </div>
       );
       let Data = await axios.get(
-        `https://7ohlgtw9j3.execute-api.us-east-1.amazonaws.com/EbaySearch?search=${search}&categoryId=${category}`
+        `https://7ohlgtw9j3.execute-api.us-east-1.amazonaws.com/EbaySearch?search=${item}&categoryId=${cat}`
       );
       setLoad();
       return Data;
@@ -34,11 +35,6 @@ function ContextProvider({ children }) {
 
     }
   };
-
-  useEffect(() => {
-    setProduct([]);
-    SearchItems().then(data => setProduct(data.data.findItemsAdvancedResponse));
-  }, [search, category]);
 
   const itemFetch = async item => {
     await setItemid(item);
@@ -50,8 +46,11 @@ function ContextProvider({ children }) {
   };
 
   function onSubmit(item, cat) {
+    setProduct([]);
     setSearch(item);
     setCategory(cat);
+    SearchItems(item, cat).then(data => setProduct(data.data.findItemsAdvancedResponse));
+
   }
 
   function onClick(item) {
