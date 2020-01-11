@@ -78,6 +78,11 @@ input::-webkit-inner-spin-button {
   height: 3.5rem;
 }
 
+.Watch_Title_Text{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
 .Timer_Style {
   text-align: left;
   font-size: 10px;
