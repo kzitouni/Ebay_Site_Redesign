@@ -1,7 +1,10 @@
 # Ebay Redesign Site
 A responsive redesigned website of Ebays utilizing the Ebay API to make fetch calls and retrieve unique item information.
 
-<img src="./Images/Ebay1.jpg" id="image"/>
+<img src="./Images/Ebay1.jpg" />
+
+## Running version of Site
+bit.ly/ebay93m
 
 ## Installation
 
@@ -26,8 +29,5 @@ npm install
 
 
 ## Additional Images
-<style>
-#image {border-radius: 10px}
-</style>
-<img src="./Images/Ebay2.jpg" id="image" >
-<img src="./Images/Ebay3.jpg" id="image">
+<img src="./Images/Ebay2.jpg" >
+<img src="./Images/Ebay3.jpg" >
