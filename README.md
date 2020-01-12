@@ -11,10 +11,10 @@ bit.ly/ebay93m
 Clone and run npm install
 
 ```bash
-git clone https://github.com/kzitouni/Ebay_Site_Redesign.git
+git clone https://github.com/kzitouni/Ebay_Site_Redesign.git 
 ```
 ```bash
-npm install
+npm install 
 ```
 
 
