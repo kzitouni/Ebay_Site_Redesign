@@ -3,9 +3,11 @@ A responsive redesigned website of Ebays utilizing the Ebay API to make fetch ca
 
 <img src="./Images/Ebay1.jpg" />
 
-## Running version of Site
-bit.ly/ebay93m
-
+<p align="center">
+<a href="https://kz-ebay-redesign.netlify.com/" target="_blank" >
+<img src="hhttps://gitimages12.s3.amazonaws.com/image+(11).png" />
+</a>
+</p>
 ## Installation
 
 Clone and run npm install
