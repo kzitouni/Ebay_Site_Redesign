@@ -5,7 +5,7 @@ A responsive redesigned website of Ebays utilizing the Ebay API to make fetch ca
 
 <p align="center">
 <a href="https://kz-ebay-redesign.netlify.com/" target="_blank" >
-<img src="hhttps://gitimages12.s3.amazonaws.com/image+(11).png" />
+<img src="https://gitimages12.s3.amazonaws.com/image+(11).png" />
 </a>
 </p>
 
