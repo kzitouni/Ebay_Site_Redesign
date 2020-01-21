@@ -111,7 +111,7 @@ let indy = ind.indexOf(itemspec.Item.ItemID)
           {box}
         </div>
 
-        <div className="Buy_Container">
+        <div className="Buy_Container Auction_Only_Cont">
           <div className="Price_Container">
             <div style={{ textAlign: "center", marginTop: "-1rem" }}>
               <h1 className="Price">${price} </h1>
@@ -149,7 +149,7 @@ let indy = ind.indexOf(itemspec.Item.ItemID)
                 </h1>
               </div>
             </button>
-            <p className="Bids_Text">
+            <p className="Bids_Text Auction_Bid">
               {itemspec != "x" ? itemspec.Item.BidCount : null} bids
             </p>
             <button className="Bid_Button" onClick={() => handleBid()}>

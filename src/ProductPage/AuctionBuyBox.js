@@ -84,7 +84,7 @@ return (
           <h1 className="Quantity_Text">Quantity: {quantity}</h1>
         </div>
 		<div className="Buy_Container" style={{height:'auto'}}>
-			<div className="Price_Container">
+			<div className="Price_Container Auction_Buy_Cont">
 				<div style={{textAlign:'center', marginTop: '-1rem'}}>
 					<h1 className="Price">${binprice}</h1>
 				</div>
@@ -103,7 +103,7 @@ return (
 					</div>
 				</div>
                 </button>
-				<div className="Price_Container">
+				<div className="Price_Container Auction_Buy_Cont">
 					<div style={{textAlign:'center', marginTop: '-1rem'}}>
 						<h1 className="Price">${price}   </h1>
 					</div>
@@ -130,7 +130,7 @@ return (
     </h1>
 				</div>
                 </button>
-                <p className="Bids_Text" style={{marginTop:'92.48px'}}>{(itemspec != "x") ?  (itemspec.Item.BidCount) : null} bids</p>
+                <p className="Bids_Text" >{(itemspec != "x") ?  (itemspec.Item.BidCount) : null} bids</p>
         <button className="Bid_Button" onClick={() => handleBid()} style={{}} >Place Bid
                 </button>
 			</div>
