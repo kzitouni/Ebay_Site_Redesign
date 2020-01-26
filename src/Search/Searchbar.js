@@ -6,7 +6,7 @@ import { IoMdEye } from "react-icons/io";
 import swal from "sweetalert";
 import CategoriesData from "./Categories/CategoriesData";
 const Searchbar = () => {
-  const { onSubmit, product } = useContext(Context);
+  const { onSubmit } = useContext(Context);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
   const [border, setBorder] = useState({});
@@ -35,7 +35,7 @@ const Searchbar = () => {
   };
   return (
     <header className="Header">
-      <Link to="/">
+      <Link to={`/search`}>
         <img
           src="https://1000logos.net/wp-content/uploads/2018/08/eBay-Logo.png"
           className="Ebay_Logo"
@@ -57,7 +57,7 @@ const Searchbar = () => {
         >
           {newarr}
         </select>
-        <Link to="/">
+        <Link to={`/search`}>
           <button onClick={() => onPress()} className="Search_Button">
             <div className="Search_Container">
               <IoIosSearch size={25} className="Search_Icon" />

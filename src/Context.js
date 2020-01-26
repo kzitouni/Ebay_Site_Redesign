@@ -50,12 +50,12 @@ function ContextProvider({ children }) {
     setSearch(item);
     setCategory(cat);
     SearchItems(item, cat).then(data => setProduct(data.data.findItemsAdvancedResponse));
-
   }
 
   function onClick(item) {
     setCategory(item);
-
+    setProduct([]);
+    SearchItems(search, item).then(data => setProduct(data.data.findItemsAdvancedResponse));
   }
   return (
     <Context.Provider
@@ -72,7 +72,8 @@ function ContextProvider({ children }) {
         setItemid,
         itemid,
         setCategory,
-        load
+        load,
+        
       }}
     >
       {children}

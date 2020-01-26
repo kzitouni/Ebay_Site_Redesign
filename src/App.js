@@ -6,17 +6,41 @@ import { Switch, Route } from "react-router-dom";
 import ProductPage from "./ProductPage/ProductPageHeader";
 import CategoriesBar from "./Search/Categories/CategoriesBar";
 import WatchListMap from "./Watchlist/WatchListMap";
-function App() { 
+import LandingPage from "./LandingPage";
+function App() {
   return (
     <div className="App">
-      <header className="App_Header">
-        <Searchbar />
-      </header>
-      <div className="Search_Container_App">
-        <div className="Categories_Left"></div>
-      </div>
       <Switch>
         <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route exact path="/product:productName">
+          <header className="App_Header">
+            <Searchbar />
+          </header>
+          <div className="Search_Container_App">
+            <div className="Categories_Left"></div>
+          </div>
+          <div>
+            <ProductPage />
+          </div>
+        </Route>
+        <Route exact path="/watchlist">
+          <header className="App_Header">
+            <Searchbar />
+          </header>
+          <div className="Search_Container_App">
+            <div className="Categories_Left"></div>
+          </div>
+          <WatchListMap />
+        </Route>
+        <Route exact path="/search">
+          <header className="App_Header">
+            <Searchbar />
+          </header>
+          <div className="Search_Container_App">
+            <div className="Categories_Left"></div>
+          </div>
           <div className="Search_Container_App">
             <div className="Categories_Left">
               <CategoriesBar />
@@ -24,14 +48,6 @@ function App() {
 
             <Result />
           </div>
-        </Route>
-        <Route exact path="/product:productName">
-          <div>
-            <ProductPage />
-          </div>
-        </Route>
-        <Route exact path="/watchlist">
-          <WatchListMap />
         </Route>
       </Switch>
     </div>
