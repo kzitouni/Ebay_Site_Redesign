@@ -27,16 +27,19 @@ const SearchResult = item => {
           style={{ backgroundImage: `url(${item.item})` }}
         ></div>
         <div className="Sub_Info_Cont">
-          <Link to={`/product${item.itemId}`}>
+          <Link to={`/product${item.itemId}`} >
             {" "}
+            <div className="Sub_Info_Title_Cont">
             <p
               onClick={() => {
                 itemFetch(item.itemId) 
               }}
+              numberOfLines={1}
               className="Sub_Info_Title"
             >
               {item.title}
-            </p>{" "}
+            </p>
+            </div>{" "}
           </Link>
           <p className="Sub_Info_Subtitle">{item.conditionDisplayName}</p>
           <div className="Left_Search">

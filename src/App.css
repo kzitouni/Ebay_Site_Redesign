@@ -120,6 +120,7 @@ font-family: 'Lato', sans-serif;
 .SearchImages {
   background-color: white;
   display: block;
+  min-width: 130px;
   width:17.8vw;
   height:141.61px;
 margin-left:2vw;
@@ -149,12 +150,20 @@ background-position: center;
   text-align:left
 }
 
+.Sub_Info_Title_Cont {
+  /* margin: 0 0 1em 0; */
+  overflow: hidden;
+}
+
 .Sub_Info_Title {
   margin-top:12.8px; 
   margin-bottom:0;
   text-align:left; 
   font-size:.9rem;
-  min-width: 510px;
+  /* min-width: 510px; */
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .Sub_Info_Subtitle {
@@ -1167,10 +1176,10 @@ height: 100%;
   min-width: 13rem;
   width: 13rem;
 }
-.Sub_Info_Title {
+/* .Sub_Info_Title {
   min-width: 250px;
     width: 220px;
-}
+} */
 }
 @media only screen and (max-width: 900px) {
   .Sub_Info_Cont {
@@ -1454,10 +1463,10 @@ ul.pagination a.page-link:hover {
   .SearchImages{
     width: 130px;
   }
-  .Sub_Info_Title{
+  /* .Sub_Info_Title{
     min-width: unset;
     width: unset;
-  }
+  } */
   .Ends_Container{
     margin-left: unset;
   }
@@ -1591,14 +1600,14 @@ font-size: 40px;
 color: white;
 margin-bottom: 10px;
 text-align: center;
-text-shadow: 2px 2px 6px #000000;
+text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 .LandingPage_Cont > div > div > p{
   font-size: 30px;
   color: white;
   text-align: center;
-  text-shadow: 2px 2px 6px #000000;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
   }
 
   @media only screen and (max-width: 450px){
