@@ -508,11 +508,13 @@ width: 100%;
   width: 35vw;
   text-align: center;
   outline: none;
-  border-bottom-color: #e1b953;
   border-width: 0;
   border-style: solid;
   font-size: 12.8px;
   display: block !important;
+  border-bottom-color: orange;
+  border-bottom-style: solid;
+  border-bottom-width: 4.04599px;
   border-bottom: 4.04599px orange solid;
   border-radius: 0;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
