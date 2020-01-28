@@ -7,7 +7,7 @@ const Context = React.createContext();
 function ContextProvider({ children }) {
   const [product, setProduct] = useState([DefaultSearch]);
   const [load, setLoad] = useState();
-  const [search, setSearch] = useState("sly cooper");
+  const [search, setSearch] = useState("guitar");
   const [category, setCategory] = useState("");
   const [itemspec, setItemspec] = useState("x");
   const [itemid, setItemid] = useState("123434343");
