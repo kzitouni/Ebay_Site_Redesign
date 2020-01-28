@@ -513,7 +513,7 @@ width: 100%;
 }
 
 .InputBar {
-  height: 33px;
+  height: 1.5rem;
   width: 35vw;
   text-align: center;
   outline: none;
@@ -1201,7 +1201,7 @@ height: 100%;
  margin-left: 98px;
  }
  .InputBar {
-   width: 317.56px;
+   width: 19.853125rem;
  }
  .App_Header {
   margin: 24.5px 70px;
@@ -1366,7 +1366,7 @@ ul.pagination a.page-link:hover {
     margin-left: 1rem;
   }
   .Header_Search{
-    height: 25px;
+    height: 1.5625rem;
   }
   .InputBar {
     height: 24px;
@@ -1376,8 +1376,8 @@ ul.pagination a.page-link:hover {
     height: 22px;
   }
   .Search_Container {
-    height: 30.05px;
-    width: 30.05px;
+    height: 1.878125rem;
+    width: 1.878125rem;
     min-width: unset;
   }
   .Search_Icon {
