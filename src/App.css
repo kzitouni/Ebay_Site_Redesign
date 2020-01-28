@@ -499,11 +499,11 @@ width: 100%;
 .Header_Search {
   margin-top: 17.34px;
     height: 34.68px;
-    border-color: orange;
+    /* border-color: orange; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-bottom-color: orange;
+    /* border-bottom-color: orange;
     border-bottom-width: 4.04599px;
-    border-style: solid;
+    border-style: solid; */
     display: flex;
 }
 
@@ -517,6 +517,7 @@ width: 100%;
   border-style: solid;
   font-size: 12.8px;
   display: block !important;
+  border-bottom: 4.04599px orange solid;
 }
 
 .Category_Select {
@@ -1362,13 +1363,14 @@ ul.pagination a.page-link:hover {
     height: 22px;
   }
   .Search_Container {
-    height: 29px;
-    width: 28px;
+    height: 30.05px;
+    width: 30.05px;
     min-width: unset;
   }
   .Search_Icon {
     width: 20px;
     margin-top: unset;
+    height: 100%;
   }
   .Watch_Container{
     margin-left: 37px;
