@@ -506,14 +506,14 @@ width: 100%;
 }
 
 .Header_Search {
-  margin-top: 17.34px;
-    height: 34.68px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
+  margin-top: 1.08375rem;
+  height: 2.1675rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
 }
 
 .InputBar {
-  height: 1.5rem;
+  height: 2.0625rem;
   width: 35vw;
   text-align: center;
   outline: none;
@@ -1369,7 +1369,8 @@ ul.pagination a.page-link:hover {
     height: 1.5625rem;
   }
   .InputBar {
-    height: 24px;
+    height: 1.5rem;
+    border-bottom-width: .252874375rem;
   }
   .Auction_Input {
     min-height: unset;
