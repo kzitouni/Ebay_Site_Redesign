@@ -73,12 +73,11 @@ function ContextProvider({ children }) {
         itemid,
         setCategory,
         load,
-        
       }}
     >
       {children}
     </Context.Provider>
   );
 }
-
 export { ContextProvider, Context };
+

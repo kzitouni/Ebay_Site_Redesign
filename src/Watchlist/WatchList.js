@@ -60,13 +60,12 @@ const WatchList = item => {
               ></div>
               <div className="Sub_Info_Cont">
                 <Link to={`/product${item.itemid}`}>
-                  {" "}
                   <p
                     onClick={() => itemFetch(item.itemid)}
                     className="Sub_Info_Title"
                   >
                     {item.title}
-                  </p>{" "}
+                  </p>
                 </Link>
                 <p className="Sub_Info_Subtitle">{item.condition}</p>
                 <div className="Left_Search">
