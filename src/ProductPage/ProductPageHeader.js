@@ -125,7 +125,7 @@ const ProductPage = item => {
                 ? itemspec.Item.PictureURL == undefined
                   ? null
                   : itemspec.Item.PictureURL.length > 1
-                  ? "3.5vw"
+                  ? "2.6vw"
                   : null
                 : null
           }}
@@ -136,7 +136,7 @@ const ProductPage = item => {
             </p>
             {itemspec != "x" ? (
               itemspec.Item.Seller.TopRatedSeller ? (
-                <div style={{ marginLeft: "10.24px" }}>
+                <div className="Star_margin_left" >
                   <IoIosStar className="Star_Icon"></IoIosStar>
                   <p className="Top_Seller_Text">Top Seller</p>
                 </div>

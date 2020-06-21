@@ -156,9 +156,9 @@ background-position: center;
 }
 
 .Sub_Info_Title {
-  margin-top:12.8px; 
+  margin-top:12.8px;
   margin-bottom:0;
-  text-align:left; 
+  text-align:left;
   font-size:.9rem;
   /* min-width: 510px; */
   display: -webkit-box;
@@ -232,9 +232,9 @@ background-position: center;
 }
 
 .Product_Info {
-  margin-left: 51.2px;
+  margin-left: 3vw;
   margin-top: 5.78px;
-  margin-right: 96px;
+  margin-right: 8vw;
   flex: 1 1;
   width: 43%
 }
@@ -242,7 +242,7 @@ background-position: center;
 .Buy_Container {
   width: 33vw;
   height:25vh;
-  margin: auto;
+  margin-left: 1.7vw;
   display:flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 142px;
@@ -254,7 +254,7 @@ background-position: center;
   padding: 54.332px 0;
   min-height: 142px;
 
-} 
+}
 
 .Price_Container{
 width: 22vw;
@@ -290,7 +290,7 @@ min-height: 142px;
 
 .Purchase_Container {
   margin:auto 5.5vw;
-  margin-top: 11.56px;
+  margin-top: 2vw;
   display:flex;
 }
 
@@ -315,7 +315,7 @@ min-height: 142px;
   height: 4.3vh;
   border-bottom-color: #a3cb47;
   border-bottom-style: solid;
-  border-bottom-width: 1.1360px;
+  border-bottom-width: .2vh;
   min-height: 24.424px;
 }
 
@@ -363,9 +363,9 @@ text-align: center;
 .Quantity_Container {
   margin: auto;
   text-align: left;
-  margin-left: 3.5vw;
+  margin-left: 1.7vw;
   display: flex;
-  flex:1;
+  flex:1 1;
   margin-bottom: 23.12px;
   margin-top: 11.56px;
 
@@ -390,9 +390,9 @@ text-align: center;
 .Condition_Container {
   margin: auto;
   text-align: left;
-  margin-left: 3.5vw;
+  margin-left: 1.7vw;
   display: flex;
-  flex:1;
+  flex:1 1;
   margin-bottom: 11.56px;
   margin-top: 23.12px;
 }
@@ -401,9 +401,10 @@ text-align: center;
   border-radius: 4vw;
   width: 51.2px;
   height: 51.2px;
-  margin-left: 3.5vw;
+  margin-left: 1.7vw;
   margin-top: 2.5vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0,
+0, 0.19)  ;
 }
 
 .Circle_Under_Buy div {
@@ -436,7 +437,7 @@ width: 100%;
 }
 
 .Shipping_Text {
-  margin-left: 3.5vw;
+  margin-left: 1.7vw;
     font-size: 8.96px;
     width: 7vw;
     text-align: left;
@@ -445,7 +446,7 @@ width: 100%;
 }
 
 .Shipping_Text_Under {
-  margin-left: 3.5vw;
+  margin-left: 1.7vw;
   font-size: 8.96px;
   width: 7vw;
   text-align: left;
@@ -527,7 +528,8 @@ width: 100%;
   border-bottom-width: 4.04599px;
   border-bottom: 4.04599px orange solid;
   border-radius: 0;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
+0, 0, 0.19); */
 }
 
 
@@ -551,7 +553,7 @@ width: 100%;
 
 .Search_Container {
   background-color:#a7ce4a;
-  text-align:center; 
+  text-align:center;
   vertical-align: middle;
   height: 38.726px;
   width: 38.726px;
@@ -627,20 +629,26 @@ margin-left: 11vw;
 
 .Seller_Container {
   text-align: center;
-  width: 50%;
+  width: 43%;
+  margin-left: 1.3vw;
+  flex: 1 1;
 }
 
 .Seller_Text {
   margin-top: 26.01px;
   font-size: 12.43px;
-  margin-left: 70.4px;
+  margin-left: 2vw;
+}
+
+.Star_margin_left {
+margin-left: 1vw;
 }
 
 .Rating_Bar {
   background-color: red;
     width: 8vw;
     height: 5.78px;
-    margin-left: 70.4px;
+    margin-left: 2vw;
     border-radius: 16px;
     margin-top: 5.78px;
 }
@@ -675,6 +683,7 @@ margin-left: 11vw;
 
 .Product_Right_HR {
   width: 32vw;
+  margin-left: 1.7vw;
 }
 
 .Product_Bottom_HR{
@@ -768,7 +777,7 @@ margin: auto;
   text-align: left;
   padding: 1vh 3vh;
   font-size: 15.36px;
-  
+
   }
 
 .Spec_Box{
@@ -781,7 +790,7 @@ margin: auto;
   .Right_Spec_Cont {
     text-align: left;
     width: 50%;
-  } 
+  }
 
   .Right_Spec_Cont_Text {
     text-align: left;
@@ -846,7 +855,7 @@ margin: auto;
   text-align: left;
     padding: 5.78px 25.6px;
     font-size: 10.24px;
-    font-weight: bold;   
+    font-weight: bold;
 }
 .Payment_Bar_Title{
   text-align: center;
@@ -902,7 +911,7 @@ margin: auto;
 .slide {
   width: 100%;
   height: 100%;
-}  
+}
 
 .backArrow {
   display: grid;
@@ -950,21 +959,21 @@ height: 100%;
 
 .Image_Button {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .Add_To {
   background: none;
-	color: inherit;
-	border: none;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .Trash_Container {
@@ -1009,7 +1018,7 @@ height: 100%;
 .Watch_Eye {
     margin-top: .7vw;
     color: #a3cb47;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
 }
 
@@ -1022,7 +1031,7 @@ height: 100%;
 }
 
 .Icon_Cont {
-  width: 10vw;
+  width: 8vw;
   text-align: center;
 }
 
@@ -1049,7 +1058,9 @@ height: 100%;
 
 .Title_Section_Cont {
   display: block;
-  width: 50%;
+  width: 46vw;
+  margin: auto 3vw auto auto;
+  text-align: center;
 }
 .Header_Space {
   width: 144.5px;
@@ -1123,7 +1134,7 @@ height: 100%;
 .Rating_Bar {
   width: 80px;
 }
-.Buy_Container{ 
+.Buy_Container{
   margin: auto 35px;
 }
 .Icon_Cont{
@@ -1196,7 +1207,7 @@ height: 100%;
    width: 160.2px;
    margin-left: 18px;
  }
- 
+
  .Ends_Container {
  margin-left: 98px;
  }
@@ -1391,7 +1402,7 @@ ul.pagination a.page-link:hover {
   }
   .Watch_Eye{
     margin-left: unset;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
   }
   .WatchList_Header {
@@ -1508,9 +1519,9 @@ ul.pagination a.page-link:hover {
 #Land_Image{
   width: 100%;
   height: 100%;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: 0;
 }
 
@@ -1598,7 +1609,7 @@ z-index: 3;
 }
 
 .LandingPage_Cont > div > div > h1{
-font-size: 40px; 
+font-size: 40px;
 color: white;
 margin-bottom: 10px;
 text-align: center;
@@ -1616,7 +1627,7 @@ text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
     .LandingPage_Cont > div > div > h1{
       font-size: 30px;
       }
-      
+
       .LandingPage_Cont > div > div > p{
         font-size: 20px;
         }
