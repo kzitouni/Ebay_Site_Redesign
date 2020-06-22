@@ -16,7 +16,7 @@ const ProductPage = item => {
     >
       <ReactLoading type={"bars"} color={"#a3cb47"} />
     </div>
-  );
+  ); 
   const date = new Date();
   var months = [
     "Jan",
